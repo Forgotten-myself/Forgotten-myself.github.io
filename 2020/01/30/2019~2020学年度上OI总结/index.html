@@ -83,7 +83,9 @@
 
     <!-- ga & ba script hoook -->
     <script></script>
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><link rel="stylesheet" href="\assets\css\APlayer.min.css" class="aplayer-style-marker">
+<script src="\assets\js\APlayer.min.js" class="aplayer-script-marker"></script>
+</head>
 
 
 <!-- hack iOS CSS :active style -->
@@ -268,6 +270,27 @@
                 <p>本文同步发表于<a href="https://www.luogu.com.cn/blog/1-2-1/2019-2020-sum-up" target="_blank" rel="noopener">$My luogu Blog$</a></p>
 <hr>
 <p>从$CSP-J$后,差不多又有半年了,然后我们又要搞总结了~($≧▽≦)/~$</p>
+
+        <div id="aplayer-kUxpgiwN" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">
+            <pre class="aplayer-lrc-content"></pre>
+        </div>
+        <script>
+          var ap = new APlayer({
+            element: document.getElementById("aplayer-kUxpgiwN"),
+            narrow: false,
+            autoplay: true,
+            showlrc: false,
+            music: {
+              title: "Luv letter",
+              author: "Dj Okawari",
+              url: "https://sz-btfs.ftn.qq.com/ftn_handler/85785e073afab799e971fa4e9a0cc0fbda119d9c8d5799baa97264083cb60ced9608c99d9bbd1c47060fb2ccea7a7caf055ca021212799ce1998b81d0021ab81/?fname=DJ%20OKAWARI%20-%20Luv%20Letter%20(%E6%83%85%E4%B9%A6).mp3&k=623032661887369d3b5a3e2a1166534d0753575f060352501804505e014b555407521f5e5350504f05525153545f075507540154374461267f107d2d763120307c101f467b131742795546125214414af2d9f88f1e480c1206300f&code=502f7fab&fr=00&&txf_fid=387cc2d93879b8a2e2097e1ef1e30bb60a7a15be&xffz=11017937",
+              pic: "https://sm.ms/delete/dUYjRIqabgxLychK61VFu3CJ5v",
+              lrc: ""
+            }
+          });
+          window.aplayers || (window.aplayers = []);
+          window.aplayers.push(ap);
+        </script>
 <hr>
 <script type="math/tex; mode=display">\texttt{一.字符串Hash}</script><p>$1.$字符串$hash$<br>$       $简单来说,$Hash≈$把字符串转成$ULL.$<br>$       Q:$为什么要用$ULL?$<br>$       A:$利用$ULL$有自然溢出的特性，可以防止负数进而防止数组下标为负</p>
 <p>$       $利用类似于<strong>进制</strong>的思想，我们就可以把一个字符串改造成$ULL$<br><img src="https://i.loli.net/2020/01/10/hvKrJDfYo6AZycb.png" alt="cf2951ecbe045cf0949ea278e2c5437e_2_0_photo.png"><br>而利用这个位值的原则，我们可以轻松地求出一个字符串中任意一个子串的值. </p>
