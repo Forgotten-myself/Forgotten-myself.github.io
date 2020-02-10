@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>CSP-J赛后总结 | Welcome</title>
-  <meta name="keywords" content=" 总结 ">
-  <meta name="description" content="CSP-J赛后总结 | Welcome">
+  <title>GSSϵ�� | Welcome</title>
+  <meta name="keywords" content=" �߶��� ">
+  <meta name="description" content="GSSϵ�� | Welcome">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="��Ȼ������$GSS$����Ŀ���ǵ�Ȼ����Ҫдһ��������(���ʲ�����û���˹���������ܲ��������)    GSS1 ��Ŀ������: $OJ      $$luogu$      ����:�����������Լ�$m$��ѯ�ʣ���ÿ��ѯ�������ڵ�����Ӷκ�.   ���ȣ�$GSS$ȫ�����ݽṹ�⣬������ǲ��">
 <meta property="og:type" content="article">
@@ -247,9 +247,9 @@
 </aside>
 <div class="post">
     <div class="pjax">
-        <article id="post-CSP-J赛后总结" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-GSS系列题解" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">CSP-J赛后总结</h1>
+        <h1 class="article-title">GSSϵ��</h1>
     
     <div class="article-meta">
         
@@ -258,14 +258,14 @@
         
         <span class="tag">
             
-            <a class="color3">总结</a>
+            <a class="color1">�߶���</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-        创建时间:<time class="date" title='更新时间: 2020-01-30 22:02:54'>2020-01-30 21:44</time>
+        创建时间:<time class="date" title='更新时间: 2020-02-10 21:58:59'>2020-02-10 21:58</time>
         
     </div>
     <div class="article-meta">
@@ -303,52 +303,90 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>花$30$分钟切了$T1$和$T2$<br>$T1$:吸取前车之鉴，没有用$getchar()$,之前有用$getchar$然后$100pts-&gt;2pts$的经历（感谢@<a href="https://www.luogu.org/user/184977" target="_blank" rel="noopener">C20211711刘君实1</a>亲身测试能用$getchar$）  </p>
+        <p>��Ȼ������$GSS$����Ŀ���ǵ�Ȼ����Ҫдһ��������(���ʲ�����û���˹���������ܲ��������)  </p>
 <hr>
-<p>$T2$：读题时、没注意</p>
-<pre><code>票价不超过地铁票价的公交车
-</code></pre><p>于是花了$5$分钟调+手算然后又看了一遍样例解释才注意到。<br>于是这句话使我的$queue$变成了$vector$重做了一遍，并且还花了$2$分钟想到$erase$与$j—$(差点没打$j—$的我和的确没打$j—$的@<a href="https://www.luogu.org/user/161849" target="_blank" rel="noopener">C2022汪冠宇</a>)结合加速(不加会$T$掉$50$分)。  </p>
+<script type="math/tex; mode=display">GSS1</script><blockquote>
+<p>��Ŀ������: <a href="http://222.180.160.110:1024/problem/7078" target="_blank" rel="noopener">$OJ      $</a><a href="https://www.luogu.com.cn/problem/SP1043" target="_blank" rel="noopener">$luogu$</a>    </p>
+</blockquote>
+<p>����:�����������Լ�$m$��ѯ�ʣ���ÿ��ѯ�������ڵ�����Ӷκ�.  </p>
+<p>���ȣ�$GSS$ȫ�����ݽṹ�⣬������ǲ���ȥ��֮ǰ$O(n)$�ķ�����ѯ����Ϊ������������ʱ����˻�Ϊ$O(nm)$  </p>
+<p>�����$O(nm)$������֮���ٿ������ݽṹ�Ļ����߶�������һ��������ѡ����.  </p>
+<p>��������߶�����Ҫά��Щʲô�أ��������������һ�¡�  </p>
+<p>Ŀ��������Ӷκͣ������Ը��ڵ��������ӽڵ��$push_up$��ϵ�����Բ���,��ѯҲ��ûʲô������  </p>
+<p>����һ�������������Ӷκ�(��Ϊ$dat$),���޷����������:  </p>
+<ol>
+<li>�����������������Ӷκ�(һ����������)  </li>
+<li>�����������������Ӷκ�(һ����������)  </li>
+<li>�����������������  </li>
+</ol>
+<p>���������ȡ���ֵ���ɡ�����ǰ�������,���Ǻܺ�ά��������������?<br>�ٸ�����:</p>
+<pre><code>2 -4 3 1    -2 4 3 1
+</code></pre><p>������������Ӷκ���$[3,8]$,���ں�����ߵ�����Ӷκͣ���ӹ���ɵ�����һ������:<strong>��������Ҷ˵�����������˵�</strong>���˺��һ�ж��������������������ġ�����������������У����ǽ��������$1$����չ��$3 1$,���������$-2$��չ��$-2 4 3 1$</p>
+<p>�ټ����۲죬���ǿ��Է���:  </p>
+<ul>
+<li>����������,������������һ�������Ҷ˵�Ϊ��ֹ�������Ӷκ�.($lmaxn$)  </li>
+<li>����������,������������һ��������˵�Ϊ��ʼ�������Ӷκ�.($rmaxn$)  </li>
+</ul>
+<p>�������ǵ��߶�����ά��һ��$lmaxn$��$rmaxn$,����������ô���ÿ�������$lmaxn$��$rmaxn$��.���Ǿ���������  </p>
+<pre><code>2 4 -3 5  2 -3 1 2
+</code></pre><p>������һ������,����$lmaxn$��$[1,5]$  </p>
+<pre><code>2 4 -9 5 2 -3 1 2
+</code></pre><p>������һ������,����$lmaxn$��$[1,2]$  </p>
+<p>��ټ������ӣ������׿���:  </p>
+<ul>
+<li>$lmaxn$Ҫô�����������$lmaxn$,Ҫô������������������������$lmaxn$  </li>
+<li>$rmaxn$Ҫô�����������$rmaxn$,Ҫô������������������������$rmaxn$<br>�����������Ϊʲô������������֤.  </li>
+</ul>
+<p>��������Ǿ��ܹ���ȷ�ؿ���������߶���Ҫά��$4$����Ϣ:$dat,lmaxn,rmaxn,sum$ �����·�ʽΪ:  </p>
+<script type="math/tex; mode=display">\texttt{tr[p].dat=max\{tr[p<<1].dat,tr[p<<1|1].dat,tr[p<<1].rmaxn+tr[p<<1|1].lmaxn\}}</script><script type="math/tex; mode=display">\texttt{tr[p].lmaxn=max\{tr[p<<1].lmaxn,tr[p<<1].sum+tr[p<<1|1].lmaxn\}}</script><script type="math/tex; mode=display">\texttt{tr[p].rmaxn=max\{tr[p<<1|1].rmaxn,tr[p<<1|1].sum+tr[p<<1].rmaxn\}}</script><script type="math/tex; mode=display">\texttt{tr[p].sum=tr[p<<1].sum+tr[p<<1|1].sum}</script><p>��ѯʱҲ�Դ����ƣ������������Ӷκ͡�  </p>
+<p><a href="https://www.luogu.com.cn/paste/bl26t9vc" target="_blank" rel="noopener">$\mathcal{CODE}$</a></p>
 <hr>
-<p>$T3:$按照经验，$T4$比$T3$简单，所以我先瞟了两眼，第一眼:完全背包，第二眼:贪心，就这么与正解擦肩而过，先打了$10\%T=1$的情况进$T4$ </p>
+<script type="math/tex; mode=display">GSS2</script><blockquote>
+<p>��Ŀ������: <a href="http://222.180.160.110:1024/problem/7133" target="_blank" rel="noopener">$OJ      $</a><a href="https://www.luogu.com.cn/problem/SP1557" target="_blank" rel="noopener">$luogu$</a>  </p>
+</blockquote>
+<script type="math/tex; mode=display">\texttt{̫���ˣ���������}</script><hr>
+<script type="math/tex; mode=display">GSS3</script><blockquote>
+<p>��Ŀ������: <a href="http://222.180.160.110:1024/problem/7105" target="_blank" rel="noopener">$OJ      $</a><a href="https://www.luogu.com.cn/problem/SP1716" target="_blank" rel="noopener">$luogu$</a>  </p>
+</blockquote>
+<p>������$GSS1$��������?˫���������?</p>
+<p>$\mathcal{CODE:}$��չʾ</p>
 <hr>
-<p>$T4:$看到这道题我分析出$Yes$=有一条从$a$到$1$的长$L$的路径，反之$No$即为没有。。。然后就不知道怎么做了，于是打了一个$dfs$骗分，嫌不够再（没事找事）加了个记忆化。<br>然后:数组$[10000][100]$,并且我忘了$bool$的$false$转$int$为$0$<br>所以一开始写成这个亚子:</p>
-<pre><code class="lang-cpp">int mem[10000][100]
-bool dfs(int a,int l)
-{
-    if(mem[a][l]) return mem[a][l];
-    if(l==0) 
-    {
-        if(a==1) return true;
-        else return false;
-    }
-    bool re=false;
-    for(int i=0;i&lt;G[a].size();i++) re|=dfs(G[a][i],l-1);
-    return mem[a][l]=re;
-}
-</code></pre>
-<p>第三行在$mem[a][l]=false$时是根本没用的，该$T$还是会$T$(跟朴素的dfs一个分，测出来还很五颜六色)<br>然后我们改成这个亚子:</p>
-<pre><code class="lang-cpp">mem[100000][1000]
-bool dfs(int a,int l)
-{
-    if(mem[a][l]) return mem[a][l]==-1?0:1;
-    if(l==0) 
-    {
-        if(a==1) return true;
-        else return false;
-    }
-    bool re=false;
-    for(int i=0;i&lt;G[a].size();i++) re|=dfs(G[a][i],l-1);
-    mem[a][l]=(re==0?-1:1);
-    return re;
-}
-</code></pre>
-<p>它就有了$75pts$<br><img src="https://i.loli.net/2019/11/18/ArgOxL5siVhkHEC.png" alt="捕获.PNG"><br>死了，还是不该偷懒不算数组大小然后开小了。然后再动动脑子把$mem=0$的情况改一改，多了$40pts$  </p>
+<script type="math/tex; mode=display">GSS4</script><blockquote>
+<p>��Ŀ������: <a href="http://222.180.160.110:1024/problem/7117" target="_blank" rel="noopener">$OJ      $</a><a href="https://www.luogu.com.cn/problem/SP2713" target="_blank" rel="noopener">$luogu$</a>  </p>
+</blockquote>
+<p>��һ�����ǻ��ǻ�ȥ���ܲ�����ӷ����߶���һ������$lazy tag$,���ܿ����Ǿͻ�������ԭ��ܼ�:  </p>
+<script type="math/tex; mode=display">\sqrt{a+b}��\sqrt{a}+\sqrt{b}</script><p>�������ܲ��ܰ������ɵ����޸���?���ܲ��ܡ�������?  </p>
+<p>�ٴ����ݷ�Χ����:   </p>
+<blockquote>
+<p>��֤$\sum a \le 10^{18}$ </p>
+</blockquote>
+<p>�õģ������ͳ�����������һ��(������ȡ��):</p>
+<script type="math/tex; mode=display">\sqrt{10^{18}}=10^9\ \ \sqrt{10^9}=31622\ \ \ \sqrt{31622}=177\ \ \ \sqrt{177}=13\ \ \ \sqrt{13}=3 \ \ \ \sqrt{3}=1������</script><p>ֻ��Ҫ$6$�Σ����ǵ�$10^{18}$�Ϳ��Ա�����$1$,���仰˵��ÿһ�����Ŀ����������ᳬ��$6$��.  </p>
+<p>���ڣ�������������߶���˳��ά��һ���������ֵ�����������ֵ����$1$,��ô���ǾͲ����޸���.  </p>
+<p>(���)ʱ�临�Ӷ�:$O(6*(n+m)logn)$  </p>
+<p><a href="https://www.luogu.com.cn/paste/fc4kt7um" target="_blank" rel="noopener">$\mathcal{CODE}$</a>  </p>
 <hr>
-<p>$T3:$骗分，预计得分$25-40$,实际得分:$15$···<br>先打了两次贪心，自己出的数据都挂掉了，看时间不多开始骗分.骗的时候都没想到$T=2$的简单情况直接性价比贪心，无脑枚举···  </p>
+<script type="math/tex; mode=display">GSS5</script><blockquote>
+<p>��Ŀ������:<a href="http://222.180.160.110:1024/problem/10856" target="_blank" rel="noopener">$OJ      $</a><a href="https://www.luogu.com.cn/problem/SP2916" target="_blank" rel="noopener">$Luogu$</a></p>
+</blockquote>
+<p>��ܰ����:��ȷ�����ѿ���$GSS1$����⣬��ƪ��⽫Χ����չ��.  </p>
+<p>��������⣬��������������ʵֻ������ˮƽ�� <del>,��Ϊʲô��֮ǰ�������Ǵ��ֺ�����?</del>  </p>
+<p>��������ϰһ�¶�������Ӷκ�,($GSS1$)����ά������Щ��Ϣ?  </p>
+<p>�������ǰ׺��$(lmaxn)     $ ��������׺��$(rmaxn)     $�����$(sum)     $  ��������Ӷκ�$(dat)$</p>
+<p>����,���ǿ������,�������������������������(������Բ��˼��):<br>1.����($l_2<r_1$)   
+2.����($l_2=r_1$)   
+3.�ཻ($l_2>r_1$) </p>
+<p>$1.$������������<br><img src="https://i.loli.net/2020/01/01/HX7ownv6y1JhcsE.png" alt="�ޱ���.png"><br>��ͼ���𰸼�Ϊ  </p>
+<script type="math/tex; mode=display">\texttt{rmaxn[l1,l2)+sum[l2,r1]+lmaxn(r1,r2]}</script><p>$2.$������������<br><img src="https://i.loli.net/2020/01/01/V8BRYADUfbGdXi2.png" alt="�ޱ���.png"><br>��ͼ���𰸼�Ϊ  </p>
+<script type="math/tex; mode=display">\texttt{rmaxn[l1,l2)+lmaxn[r1,r2]}</script><p>$3.$���������ཻ<br><img src="https://i.loli.net/2020/01/01/FpwVjokZcQbudmB.png" alt="�ޱ���.png"><br>�����������������.���ﲻһһ��ͼ����ҿ����Լ�����һ��.<del>(˵���˾������û�)</del><br>$(1).$�𰸵����������˵���$[l2,r1]$  </p>
+<script type="math/tex; mode=display">\texttt{dat[l2,r1]}</script><p>$(2).$�𰸵����������$[l1,l2]$,�յ���$(l2,r1]$  </p>
+<script type="math/tex; mode=display">\texttt{rmaxn[l1,l2]+lmaxn(l2,r1]}</script><p>$(3).$�𰸵����������$[l2,r1]$,�յ���$(r1,r2]$</p>
+<script type="math/tex; mode=display">\texttt{rmaxn[l2,r1]+lmaxn(r1,r2]}</script><p>$(4).$�𰸵����������$[l1,l2]$,�յ���$[r1,r2]$  </p>
+<script type="math/tex; mode=display">\texttt{rmaxn[l1,l2)+sum[l2,r1]+lmaxn(r1,r2]}</script><p>���������������ȥ���ֵ����</p>
+<p>��ʵ�ֵ�ʱ����ܻ���һ�����⣬Ϊʲô��?���ǵ��߶����洢���Ǳ��������Ϣ����������а뿪��յ����.��������������Ѳ������ǣ����Խ�����������Լ�˼��һ�£����źܼ�.</p>
+<p>$\mathcal{CODE}$:���ṩ��������г�����Ӧ�ð�$1$�Ĵ������Ը�һ�¼���.</p>
 <hr>
-<p>总的来说，我们得到了如下宝贵经验:<br>$1.getchar()$除了快读和吞回车基本不要打(尽量吞回车都不要用)<br>$2.$仔细读题，勾画重点<br>$3.$各种想到的算法都试一试<br><del>$4.$骗分也要骗得有技术含量，不要犯低级错误</del><br>$5.$数组一定要算大小  </p>
-<hr>
-<p>事后:发现$T4$的$Yes$和$No$打错了···自闭了$2=AFO$</p>
+<p>�ڸ���֮ǰ���������Ķ�����������.<br><img src="https://i.loli.net/2019/12/30/LK9vYFUAJgVH6MO.jpg" alt="������"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
@@ -362,12 +400,12 @@ bool dfs(int a,int l)
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>CSP-J赛后总结</p>
+    <p><span class="copy-title">文章标题:</span>GSSϵ��</p>
     
     <p><span class="copy-title">本文作者:</span><a  title="Forgotten-myself">Forgotten-myself</a></p>
-    <p><span class="copy-title">发布时间:</span>2020-01-30, 21:44:00</p>
-    <p><span class="copy-title">最后更新:</span>2020-01-30, 22:02:54</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/01/30/CSP-J%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="CSP-J赛后总结">http://forgotten-myself.github.io/2020/01/30/CSP-J%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/</a>
+    <p><span class="copy-title">发布时间:</span>2020-02-10, 21:58:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-02-10, 21:58:59</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/02/10/GSS%E7%B3%BB%E5%88%97%E9%A2%98%E8%A7%A3/" title="GSSϵ��">http://forgotten-myself.github.io/2020/02/10/GSS%E7%B3%BB%E5%88%97%E9%A2%98%E8%A7%A3/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
     </p>
