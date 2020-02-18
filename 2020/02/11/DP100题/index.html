@@ -1,0 +1,1972 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DP 100题 | Welcome</title>
+  <meta name="keywords" content=" 背包 , 树形DP , 区间DP , DP ">
+  <meta name="description" content="DP 100题 | Welcome">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="DP100 目录和前言前言$       $其实我也不知道为什么要开这么一个坑。$       $CSP 已经结束了，又是新的一年。本着 dp 不好的原则，想练一下 dp，通过这个坑，不仅锻炼自己的 dp 水平，还能提高写博客的技巧，何乐而不为呢？$       $2019&#x2F;12&#x2F;17 这个日子，晚自习的时候突然脑子一抽想来开这么一个坑。想法告诉了巨佬wy，lyc，xc，zyz以及tr之后得到了鄙">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DP 100题">
+<meta property="og:url" content="http://forgotten-myself.github.io/2020/02/11/DP100%E9%A2%98/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="DP100 目录和前言前言$       $其实我也不知道为什么要开这么一个坑。$       $CSP 已经结束了，又是新的一年。本着 dp 不好的原则，想练一下 dp，通过这个坑，不仅锻炼自己的 dp 水平，还能提高写博客的技巧，何乐而不为呢？$       $2019&#x2F;12&#x2F;17 这个日子，晚自习的时候突然脑子一抽想来开这么一个坑。想法告诉了巨佬wy，lyc，xc，zyz以及tr之后得到了鄙">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.luogu.com.cn/upload/pic/34882.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/09/30/ilT4sS.gif">
+<meta property="article:published_time" content="2020-02-11T05:25:00.000Z">
+<meta property="article:modified_time" content="2020-02-11T05:22:22.571Z">
+<meta property="article:author" content="Forgotten">
+<meta property="article:tag" content="背包">
+<meta property="article:tag" content="树形DP">
+<meta property="article:tag" content="区间DP">
+<meta property="article:tag" content="DP">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.luogu.com.cn/upload/pic/34882.png">
+
+
+<link rel="icon" href="/img/avatar.jpg">
+
+<link href="/css/style.css?v=1.0.1" rel="stylesheet">
+
+<link href="/css/hl_theme/sublime.css?v=1.0.1" rel="stylesheet">
+
+<link href="//cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="/js/jquery.autocomplete.min.js?v=1.0.1" ></script>
+
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+
+<script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+
+
+
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js" ></script>
+
+<script src="/js/iconfont.js?v=1.0.1" ></script>
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+<div style="display: none">
+  <input class="theme_disqus_on" value="false">
+  <input class="theme_preload_comment" value="false">
+  <input class="theme_blog_path" value="">
+</div>
+
+<body>
+<aside class="nav">
+    <div class="nav-left">
+        <a href="/" class="avatar_target">
+    <img class="avatar" src="/img/avatar.jpg" />
+</a>
+<div class="author">
+    <span>Forgotten</span>
+</div>
+
+<div class="icon">
+    
+        
+        <a title="github" href="https://github.com/Forgotten-myself" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="zhihu" href="https://www.zhihu.com/people/qwqzi-dong-ji" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-zhihu"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="email" href="mailto:1275881998@qq.com" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-email"></use>
+                </svg>
+            
+        </a>
+        
+    
+        
+        <a title="qq" href="http://wpa.qq.com/msgrd?v=3&uin=1275881998&site=qq&menu=yes" target="_blank">
+            
+                <svg class="iconfont-svg" aria-hidden="true">
+                    <use xlink:href="#icon-qq"></use>
+                </svg>
+            
+        </a>
+        
+    
+</div>
+
+
+
+
+<ul>
+    <li><div class="all active">全部文章<small>(4)</small></div></li>
+    
+</ul>
+<div class="left-bottom">
+    <div class="menus">
+    
+    
+    
+    
+    </div>
+    <div><a class="about  site_url"  href="/about">关于</a></div>
+</div>
+<input type="hidden" id="yelog_site_posts_number" value="4">
+
+<div style="display: none">
+    <span id="busuanzi_value_site_uv"></span>
+    <span id="busuanzi_value_site_pv"></span>
+</div>
+
+    </div>
+    <div class="nav-right">
+        <div class="friends-area">
+    <div class="friends-title">
+        友情链接
+        <i class="back-title-list"></i>
+    </div>
+    <div class="friends-content">
+        <ul>
+            
+            <li><a target="_blank" href="http://yelog.org/">叶落阁</a></li>
+            
+        </ul>
+    </div>
+</div>
+        <div class="title-list">
+    <form onkeydown="if(event.keyCode === 13){return false;}">
+        <input id="local-search-input" class="search" type="text" placeholder="Search..." />
+        <i class="cross"></i>
+        <span>
+            <label for="tagswitch">Tags:</label>
+            <input id="tagswitch" type="checkbox" style="display: none" />
+            <i id="tagsWitchIcon"></i>
+        </span>
+    </form>
+    <div class="tags-list">
+    
+    <li class="article-tag-list-item">
+        <a class="color3">总结</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">哈希</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color1">Trie树</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">树状数组</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">分治</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">二分</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">三分</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">背包</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">树形DP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color5">区间DP</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color4">线段树</a>
+    </li>
+    
+    <li class="article-tag-list-item">
+        <a class="color3">DP</a>
+    </li>
+    
+    <div class="clearfix"></div>
+</div>
+
+    
+    <nav id="title-list-nav">
+        
+        <a  class=""
+           href="/2020/01/30/2019~2020%E5%AD%A6%E5%B9%B4%E5%BA%A6%E4%B8%8AOI%E6%80%BB%E7%BB%93/"
+           data-tag="总结,哈希,Trie树,树状数组,分治,二分,三分,背包,树形DP,区间DP"
+           data-author="CLJ" >
+            <span class="post-title" title="2019~2020学年度上OI总结">2019~2020学年度上OI总结</span>
+            <span class="post-date" title="2020-01-30 21:45:00">2020/01/30</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/01/30/CSP-J%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/"
+           data-tag="总结"
+           data-author="CLJ" >
+            <span class="post-title" title="CSP-J赛后总结">CSP-J赛后总结</span>
+            <span class="post-date" title="2020-01-30 21:44:00">2020/01/30</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/02/10/GSS%E7%B3%BB%E5%88%97%E9%A2%98%E8%A7%A3/"
+           data-tag="线段树"
+           data-author="CLJ" >
+            <span class="post-title" title="GSS系列题解">GSS系列题解</span>
+            <span class="post-date" title="2020-02-10 22:08:00">2020/02/10</span>
+        </a>
+        
+        <a  class=""
+           href="/2020/02/11/DP100%E9%A2%98/"
+           data-tag="背包,树形DP,区间DP,DP"
+           data-author="LJS" >
+            <span class="post-title" title="DP 100题">DP 100题</span>
+            <span class="post-date" title="2020-02-11 13:25:00">2020/02/11</span>
+        </a>
+        
+    </nav>
+</div>
+    </div>
+    <div class="hide-list">
+        <div class="semicircle">
+            <div class="brackets first"><</div>
+            <div class="brackets">&gt;</div>
+        </div>
+    </div>
+</aside>
+<div class="post">
+    <div class="pjax">
+        <article id="post-DP100题" class="article article-type-post" itemscope itemprop="blogPost">
+    
+        <h1 class="article-title">DP 100题</h1>
+    
+    <div class="article-meta">
+        
+        
+        <span class="author"><a>LJS</a></span>
+        
+        
+        
+        <span class="tag">
+            
+            <a class="color3">背包</a>
+            
+            <a class="color5">树形DP</a>
+            
+            <a class="color5">区间DP</a>
+            
+            <a class="color3">DP</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+        创建时间:<time class="date" title='更新时间: 2020-02-11 13:22:22'>2020-02-11 13:25</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读:<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#DP100-目录和前言"><span class="toc-text">DP100 目录和前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#半年怕是结不了束了"><span class="toc-text">半年怕是结不了束了</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Attention！"><span class="toc-text">Attention！</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Index"><span class="toc-text">Index</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#动态规划100题-1-10-题"><span class="toc-text">动态规划100题 1~10 题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-「NOI2001」炮兵阵地（简单状压-dp）"><span class="toc-text">1.「NOI2001」炮兵阵地（简单状压 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-「JSOI2016」病毒感染（dp-预处理拆开复杂度处理）"><span class="toc-text">2.「JSOI2016」病毒感染（dp 预处理拆开复杂度处理）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-「ZJOI2007」棋盘制作（dp-单调栈经典模型）"><span class="toc-text">3.「ZJOI2007」棋盘制作（dp + 单调栈经典模型）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-「SEERC2019」Game-on-a-Tree（博弈论类树形-dp）"><span class="toc-text">4.「SEERC2019」Game on a Tree（博弈论类树形 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-「NOI1997」积木游戏（较难的线性-dp）"><span class="toc-text">5.「NOI1997」积木游戏（较难的线性 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-「HAOI2006」数字序列（很牛逼的线性-dp-数学证明）"><span class="toc-text">6.「HAOI2006」数字序列（很牛逼的线性 dp + 数学证明）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-「GZOI2017」取石子游戏（博弈论类-dp）"><span class="toc-text">7.「GZOI2017」取石子游戏（博弈论类 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-「SCOI2005」最大子矩阵（简单-dp）"><span class="toc-text">8.「SCOI2005」最大子矩阵（简单 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-「SNOI2017」英雄联盟（背包-dp）"><span class="toc-text">9.「SNOI2017」英雄联盟（背包 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-「HAOI2015」树上染色（树形类背包-dp）"><span class="toc-text">10.「HAOI2015」树上染色（树形类背包 dp）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#动态规划100题-11-20-题"><span class="toc-text">动态规划100题 11~20 题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-「CF1101D」GCD-Counting（思维树形-dp）"><span class="toc-text">11.「CF1101D」GCD Counting（思维树形 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-「JSOI2018」潜入行动（不简单的背包树形-dp）"><span class="toc-text">12.「JSOI2018」潜入行动（不简单的背包树形 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-「CF1114D」Flood-Fill（套路区间-dp）"><span class="toc-text">13.「CF1114D」Flood Fill（套路区间 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-「CF149D」Coloring-Brackets（限制性区间-dp）"><span class="toc-text">14.「CF149D」Coloring Brackets（限制性区间 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-「CQOI2009」叶子的染色（猜结论-树形-dp）"><span class="toc-text">15.「CQOI2009」叶子的染色（猜结论+树形 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-「HAOI2016」字符合并（区间-dp-x-状压-dp）"><span class="toc-text">16.「HAOI2016」字符合并（区间 dp x 状压 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-「GXOI-GZOI2019」宝牌一大堆（我也不知道是什么-dp）"><span class="toc-text">17.「GXOI&#x2F;GZOI2019」宝牌一大堆（我也不知道是什么 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-「UVA1452」Jump（约瑟夫问题变形）"><span class="toc-text">18.「UVA1452」Jump（约瑟夫问题变形）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-「CF235B」Let’s-play-OSU-和-「BZOJ4318」OSU-（期望-dp）"><span class="toc-text">19.「CF235B」Let’s play OSU! 和 「BZOJ4318」OSU!（期望 dp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-「CF76F」Tourist（LIS-变形）"><span class="toc-text">20.「CF76F」Tourist（LIS 变形）</span></a></li></ol></li></ol>
+    
+<style>
+    .left-col .switch-btn,
+    .left-col .switch-area {
+        display: none;
+    }
+    .toc-level-3 i,
+    .toc-level-3 ol {
+        display: none !important;
+    }
+</style>
+</div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="DP100-目录和前言"><a href="#DP100-目录和前言" class="headerlink" title="DP100 目录和前言"></a>DP100 目录和前言</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>$       $其实我也不知道为什么要开这么一个坑。<br>$       $CSP 已经结束了，又是新的一年。本着 dp 不好的原则，想练一下 dp，通过这个坑，不仅锻炼自己的 dp 水平，还能提高写博客的技巧，何乐而不为呢？<br>$       $2019/12/17 这个日子，晚自习的时候突然脑子一抽想来开这么一个坑。想法告诉了巨佬wy，lyc，xc，zyz以及tr之后得到了<del>鄙视以及一句你疯了</del>大力支持，再次膜拜。<br>$       $本着鸽子的精神，我争取在半年之内开到100题，也希望不会咕咕吧。。。<br>$       $最后题目不会太水，<del>由易到难</del>（稍微考虑了一下，第一道就蓝了不至于吧，第六道就紫了也不至于吧。。。随便找点紫的黑的做着玩就行啦qwq），希望能够加强自己的 dp 水平吧。<br>$       $附加，如果没用正解弄过去（比如打表，搜索，O2等等），如果不是的确可以很正常的想到优化的话，请不要像小学生一样盖楼。谢谢。</p>
+<h2 id="半年怕是结不了束了"><a href="#半年怕是结不了束了" class="headerlink" title="半年怕是结不了束了"></a>半年怕是结不了束了</h2><p>$       $当前进度 20/100</p>
+<h2 id="Attention！"><a href="#Attention！" class="headerlink" title="Attention！"></a>Attention！</h2><p>$       $考虑加载实在是太慢，分析之后认为，我们需要分开成 10 份，每份 10 道题（不然会卡死xd），大概只会贴一个 Link 了。</p>
+<h2 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h2><p>$       $<a href="https://www.luogu.com.cn/blog/blog10086001/dong-tai-gui-hua-100-ti-110-ti" target="_blank" rel="noopener">1~10 题</a></p>
+<p>$       $<a href="https://www.luogu.com.cn/blog/blog10086001/dong-tai-gui-hua-100-ti-1120-ti" target="_blank" rel="noopener">11~20 题</a></p>
+<ol>
+<li><p>「NOI2001」炮兵阵地（简单状压 dp）</p>
+</li>
+<li><p>「JSOI2016」病毒感染（dp 预处理拆开复杂度处理）</p>
+</li>
+<li><p>「ZJOI2007」棋盘制作（dp + 单调栈经典模型）</p>
+</li>
+<li><p>「SEERC2019」Game on a Tree（博弈论类树形 dp）</p>
+</li>
+<li><p>「NOI1997」积木游戏（较难的线性 dp）</p>
+</li>
+<li><p>「HAOI2006」数字序列（很牛逼的线性 dp + 数学证明）</p>
+</li>
+<li><p>「GZOI2017」取石子游戏（博弈论类 dp）</p>
+</li>
+<li><p>「SCOI2005」最大子矩阵（简单 dp）</p>
+</li>
+<li><p>「SNOI2017」英雄联盟（背包 dp）</p>
+</li>
+<li><p>「HAOI2015」树上染色（树形类背包 dp）</p>
+</li>
+<li><p>「CF1101D」GCD Counting（思维树形 dp）</p>
+</li>
+<li><p>「JSOI2018」潜入行动（不简单的背包树形 dp）</p>
+</li>
+<li><p>「CF1114D」Flood Fill（套路区间 dp）</p>
+</li>
+<li><p>「CF149D」Coloring Brackets（限制性区间 dp）</p>
+</li>
+<li><p>「CQOI2009」叶子的染色（猜结论+树形 dp）</p>
+</li>
+<li><p>「HAOI2016」字符合并（区间 dp x 状压 dp）</p>
+</li>
+<li><p>「GXOI/GZOI2019」宝牌一大堆（我也不知道是什么 dp）</p>
+</li>
+<li><p>「UVA1452」Jump（约瑟夫问题变形）</p>
+</li>
+<li><p>「CF235B」Let’s play OSU! 和 「BZOJ4318」OSU!（期望 dp）</p>
+</li>
+<li><p>「CF76F」Tourist（LIS 变形）</p>
+</li>
+</ol>
+<h1 id="动态规划100题-1-10-题"><a href="#动态规划100题-1-10-题" class="headerlink" title="动态规划100题 1~10 题"></a>动态规划100题 1~10 题</h1><h2 id="1-「NOI2001」炮兵阵地（简单状压-dp）"><a href="#1-「NOI2001」炮兵阵地（简单状压-dp）" class="headerlink" title="1.「NOI2001」炮兵阵地（简单状压 dp）"></a>1.「NOI2001」炮兵阵地（简单状压 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P2704" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $首先观察题目，我们发现不能用传统的方式去定义我们的 dp 数组，因为 $dp_{i,j}$ 甚至维度更高似乎无法有效地储存状态。并且我们的影响范围还会影响到前两行，怎么办呢？</p>
+<p>$       $我们发现 $n,m$ 都是很小的，炮兵影响范围相对来说也是比较小的。我们考虑状压 dp。首先我们定义一行炮兵排列合法，当且仅当炮兵互相之间不冲突，并且炮兵不会放置在山上。于是我们考虑在 dp 数组之间带上前 1 行的状态和当前行状态。为什么不考虑前两行呢？是因为我们转移的时候，确定前 1 行合法，那么前 2 行会被当做前 1 行的前 1 行处理掉。</p>
+<p>$       $我们考虑如何保存状态。我们将状态压缩成一个数 $S$。这个 $S$ 转化成二进制，如果第 $x$ 位是 1，就代表第 $x$ 位有炮兵。</p>
+<p>$       $根据上面，我们可以很自然地定义出 $dp_{i,S,T}$ 为第 $i$ 行状态为 $S$，$i-1$ 行状态为 $T$ 的放置最多炮兵数。有 dp 方程：</p>
+<script type="math/tex; mode=display">dp_{i,S,T}=\max \{ dp_{i-1,T,U} \}</script><p>$       $其中 $i,S,T$ 如上定义，$U$ 即为 $i-2$ 行的状态。其中满足:</p>
+<ul>
+<li><p>$S \&amp; T=0$。</p>
+</li>
+<li><p>$S \&amp; U=0$。</p>
+</li>
+<li><p>$T \&amp; U=0$。</p>
+</li>
+<li><p>$S,T,U$ 都合法。</p>
+</li>
+<li><p>$3 \leq i \leq n$.</p>
+</li>
+</ul>
+<p>$       $有了这些，很容易得到我们的答案即为 $\sum dp_i,S,T$。其中 $i,S,T$ 需要枚举计算答案。</p>
+<p>$       $同时，我们需要预处理。我们从第 1 行开始。如果这一行选择状态 $K$ 是可以的，那么我们的 $dp_{1,K,0}=|K|$，其中 $|K|$ 为 $K$ 转化成二进制之后有多少个 1。计算这个东西有两种方法：</p>
+<pre><code class="lang-cpp">int __builtin_popcount(int x);
+long long __builtin_popcountll(long long x);
+</code></pre>
+<p>$       $内置函数，可直接使用，但是很慢。。。最好别用。</p>
+<pre><code class="lang-cpp">int lowbit(int x){return x&amp;(-x);}
+int popcount(int x)
+{
+    int ans=0;
+    while(x)
+    {
+        x-=lowbit(x);
+        ++ans;
+    }
+    return ans;
+}
+</code></pre>
+<p>$       $预处理 $dp_2$ 也是很简单的，仍然是枚举计算。</p>
+<p>$       $我们的时间复杂度 $O(n \times 2^{3m})$。但实际上加上我们不合法序列的剪枝，跑的会快很多。但是这道题卡空间。。。</p>
+<p>$       $我们发现我们的状态只跟前两行有关，于是我们可以把第一位滚掉，就不会 MLE 了。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#define BuiPop(i) __builtin_popcount(i)
+#define last j
+#define now k
+#define lastslast l
+using namespace std;
+int dp[3][1025][1025],a[105],n,m,ans;
+char c[15];
+void Prepare()
+{
+    for(int i=0;i&lt;(1&lt;&lt;m);++i)    if(!(i&amp;(i&lt;&lt;1) || i&amp;(i&lt;&lt;2) || i&amp;a[1]))    dp[1][i][0]=BuiPop(i);
+    for(int i=0;i&lt;(1&lt;&lt;m);++i)    for(int j=0;j&lt;(1&lt;&lt;m);++j)    if(!(i&amp;j || i&amp;(i&lt;&lt;1) || i&amp;(i&lt;&lt;2) || j&amp;(j&lt;&lt;1) || j&amp;(j&lt;&lt;2) || i&amp;a[1] || j&amp;a[2]))    dp[2][j][i]=BuiPop(i)+BuiPop(j);
+}
+void DynamicProgramming()
+{
+    for(int i=3;i&lt;=n;++i)
+    {
+        for(int j=0;j&lt;(1&lt;&lt;m);++j)//last
+        {
+            if(j&amp;(j&lt;&lt;1) || j&amp;(j&lt;&lt;2) || j&amp;a[i-1])    continue;
+            for(int k=0;k&lt;(1&lt;&lt;m);++k)//now
+            {
+                if(j&amp;k || k&amp;(k&lt;&lt;1) || k&amp;(k&lt;&lt;2) || k&amp;a[i])    continue;
+                for(int l=0;l&lt;(1&lt;&lt;m);++l)//last&#39;s last
+                {
+                    if(l&amp;j || l&amp;k || l&amp;(l&lt;&lt;1) || l&amp;(l&lt;&lt;2) || l&amp;a[i-2])    continue;
+                    dp[i%3][now][last]=max(dp[i%3][now][last],dp[(i-1)%3][last][lastslast]+BuiPop(k));
+                }
+            }
+        }
+    }
+}
+void GetAnswers()
+{
+    for(int i=0;i&lt;(1&lt;&lt;m);++i)    for(int j=0;j&lt;(1&lt;&lt;m);++j)    ans=max(ans,dp[n%3][i][j]);
+}
+int main(){
+    scanf(&quot;%d %d&quot;,&amp;n,&amp;m);
+    for(int i=1;i&lt;=n;++i)
+    {
+        scanf(&quot;%s&quot;,c+1);
+        for(int j=1;j&lt;=m;++j)
+        {
+            a[i]&lt;&lt;=1;
+            if(c[j]==&#39;H&#39;)    a[i]|=1;
+        }
+    }
+    Prepare();
+    DynamicProgramming();
+    GetAnswers();
+    printf(&quot;%d&quot;,ans);
+    return 0;
+}
+</code></pre>
+<h2 id="2-「JSOI2016」病毒感染（dp-预处理拆开复杂度处理）"><a href="#2-「JSOI2016」病毒感染（dp-预处理拆开复杂度处理）" class="headerlink" title="2.「JSOI2016」病毒感染（dp 预处理拆开复杂度处理）"></a>2.「JSOI2016」病毒感染（dp 预处理拆开复杂度处理）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P5774" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $算是一道简单的 dp 题了。</p>
+<p>$       $我们直接暴力 dp 会发现 $O(n^3)$ 的时间复杂度只能得 $50\%$ 的分，于是我们考虑优化。</p>
+<p>$       $瓶颈在于我们无法快速计算 $i → j → i$ 途中的最少死亡的人数。于是我们把两样东西拆开来进行计算。</p>
+<p>$       $因为村庄排成一条链，我们定义 $sum_i=\sum_{j=1}^i a_j$。</p>
+<p>$       $我们定义 $dp_{i,j}$ 为 $i → j → i$ 途中的最少死亡的人数，枚举 $i$ 为起点， $j$ 为长度，可以得到这个 dp 方程：</p>
+<script type="math/tex; mode=display">dp_{j,i+j}=dp_{j+1,i+j} + \min ((sum_{i+j}-sum_{j})\times 2 , a_j \times i \times 3 + sum_{i+j}-sum_{j})</script><p>$       $至此，我们用 $O(n^2)$ 的时间复杂度完成了预处理，接下来就是计算答案。</p>
+<p>$       $我们定义 $dp2_i$ 为当前在村庄 $i$ 并且 $i$ 到 $i$ 以前的村庄疫情消灭的总消失最小人数，我们可以快速得到：</p>
+<script type="math/tex; mode=display">dp2_i=\min \{dp2_j+dp_{j+1,i}+(4 \times i - 4 \times j - 2)\times (sum_n-sum_i)\}</script><p>$       $至此，时间复杂度 $O(n^2)$，可以解决问题。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+long long min(long long x,long long y){return x&lt;y?x:y;}
+long long n,dp[3005][3005],dp2[3005],sum[3005],a[3005];
+int main(){
+    scanf(&quot;%lld&quot;,&amp;n);
+    for(long long i=1;i&lt;=n;++i)    scanf(&quot;%lld&quot;,&amp;a[i]),sum[i]=sum[i-1]+a[i];
+    for(long long i=1;i&lt;=n-1;++i)    for(long long j=1;j&lt;=n-i;++j)    dp[j][i+j]=dp[j+1][i+j]+min((sum[i+j]-sum[j])*2,a[j]*i*3+sum[i+j]-sum[j]);
+    memset(dp2,0x3f,sizeof dp2);//设置极大值
+    dp2[0]=0;
+    for(long long i=1;i&lt;=n;++i)    for(long long j=0;j&lt;i;++j)    dp2[i]=min(dp2[i],dp2[j]+dp[j+1][i]+(4*i-4*j-2)*(sum[n]-sum[i]));
+    printf(&quot;%lld&quot;,dp2[n]);
+    return 0;
+}
+</code></pre>
+<h2 id="3-「ZJOI2007」棋盘制作（dp-单调栈经典模型）"><a href="#3-「ZJOI2007」棋盘制作（dp-单调栈经典模型）" class="headerlink" title="3.「ZJOI2007」棋盘制作（dp + 单调栈经典模型）"></a>3.「ZJOI2007」棋盘制作（dp + 单调栈经典模型）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P1169" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $我们要找到一个黑白相间的棋盘（可以参考国际象棋棋盘），第一个小问题是找到最大的正方形，第二个是找到最大的矩形。</p>
+<p>$       $我们注意到棋盘跟题 1 一样只有两种格子，能用状压吗？答案是否。因为 $n,m \leq 2000$，所以不能状压。</p>
+<p>$       $同时，找到最大的合法正方形和矩形，恰好是我们的找纯色最大正方形和矩形的经典模型（分别用 dp 和单调栈求解），我们能够在此间转换吗？</p>
+<p>$       $答案是可以的。我们将 $a_{i,j} \oplus 1 (i + j \mod 2 = 0)$，其中 $\oplus$ 为异或符号。</p>
+<p>$       $我们发现随机取上一个矩阵，我们翻转了之后，发现其实就是可以互相转换的。现在我们反转之后只需要求纯色最大正方形和矩形的经典模型了。</p>
+<p>$       $对于第一个问题，定义 $dp_{0,i,j}$ 为 $a_{i,j}=0$，以 $(i,j)$ 为右下角的正方形最大边长。$dp_1$ 同理。对于 dp 方程，有：</p>
+<script type="math/tex; mode=display">\begin{cases}
+dp_{0,i,j}=\min \{ dp_{0,i-1,j},dp_{0,i-1,j-1},dp_{0,i,j-1}+1\} (a_{i,j}=0) \\ dp_{1,i,j}=\min \{ dp_{1,i-1,j},dp_{1,i-1,j-1},dp_{1,i,j-1}+1\} (a_{i,j}=1)
+\end{cases}</script><p>$       $易得答案为 $\max \{ dp \}$，时间复杂度 $O(nm)$。</p>
+<p>$       $对于第二个问题，用单调栈求解。我们首先储存一段连续的高，也就是对于一个数最多能往上延伸多少相同的连续的数。枚举每一行作为矩形底边，这道题就变成了直方图最大矩形问题。枚举下边时间复杂度 $O(n)$，单调栈 $O(m)$。</p>
+<p>$       $得到这些，总时间复杂度 $O(nm)$，可以通过题目。感谢 S-LJS 搬运到校OJ。公开之后会发链接。</p>
+<p>$       $代码如下。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;cstring&gt;
+using namespace std;
+int n,m,a[2005][2005];
+namespace DynamicProgramming
+{
+    int dp1[2005][2005],dp2[2005][2005];
+    void Dp()
+    {
+        int ans=0;
+        for(int i=1;i&lt;=n;++i)
+        {
+            for(int j=1;j&lt;=m;++j)
+            {
+                if(a[i][j])    dp1[i][j]=min(min(dp1[i-1][j],dp1[i][j-1]),dp1[i-1][j-1])+1;
+                else    dp2[i][j]=min(min(dp2[i-1][j],dp2[i][j-1]),dp2[i-1][j-1])+1;
+                ans=max(ans,max(dp1[i][j],dp2[i][j]));
+            }
+        }
+        printf(&quot;%d\n&quot;,ans*ans);
+    }
+}
+namespace MonotonicStack
+{
+    int cnt[2005][2005],ans,s[2005],l[2005];
+    void Monotonic(int sp[])
+    {
+        int top=0,len=0;
+        s[top]=l[top]=0;
+        for(int i=1;i&lt;=m;++i)
+        {
+            if(sp[i]&gt;=s[top])    s[++top]=sp[i],l[top]=1;
+            else
+            {
+                len=0;
+                while(top &amp;&amp; s[top]&gt;sp[i])
+                {
+                    len+=l[top];
+                    ans=max(ans,len*s[top]);
+                    --top;
+                }
+                s[++top]=sp[i];
+                l[top]=len+1;
+            }
+        }
+        len=0;
+        while(top)
+        {
+            len+=l[top];
+            ans=max(ans,len*s[top]);
+            --top;
+        }
+    }
+    void Stack(){for(int i=1;i&lt;=n;++i)    Monotonic(cnt[i]);}
+    void Ans(){printf(&quot;%d&quot;,ans);}
+}
+using namespace MonotonicStack;
+int main(){
+    scanf(&quot;%d %d&quot;,&amp;n,&amp;m);
+    for(int i=1;i&lt;=n;++i)
+    {
+        for(int j=1;j&lt;=m;++j)
+        {
+            scanf(&quot;%d&quot;,&amp;a[i][j]);
+            if(!((i+j)&amp;1))    a[i][j]^=1;
+            if(a[i][j])    cnt[i][j]=cnt[i-1][j]+1;
+        }
+    }
+    DynamicProgramming::Dp();
+    MonotonicStack::Stack();
+    memset(cnt,0,sizeof cnt);
+    for(int i=1;i&lt;=n;++i)
+    {
+        for(int j=1;j&lt;=m;++j)
+        {
+            if(!a[i][j])    cnt[i][j]=cnt[i-1][j]+1;
+        }
+    }
+    MonotonicStack::Stack();
+    MonotonicStack::Ans();
+    return 0;
+}
+</code></pre>
+<h2 id="4-「SEERC2019」Game-on-a-Tree（博弈论类树形-dp）"><a href="#4-「SEERC2019」Game-on-a-Tree（博弈论类树形-dp）" class="headerlink" title="4.「SEERC2019」Game on a Tree（博弈论类树形 dp）"></a>4.「SEERC2019」Game on a Tree（博弈论类树形 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P5801" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $题意转化：有一棵以 1 为根的树，每个节点的初始颜色为白色。Alice 先让任意一个节点放上标记变黑作为一次操作。然后 Bob 开始，轮流移动这个标记到当前所在节点的任意一个白色的祖先或者后代节点，并且把它这个节点染成黑色。谁不能移动谁就输了。</p>
+<p>$       $考虑这个树上博弈问题。首先引进树的最大匹配。不会的同学，可以自查博客。</p>
+<p>$       $首先假设我们只能够走到相邻的节点，我们发现我们只需要判断这棵树是否满足，它的最大匹配是一个完美匹配。如果是的话，后手必胜，否则先手一定能够避免，于是先手必胜。</p>
+<p>$       $回到问题，我们不只是走到相邻的节点。但是思路相同，这个问题我们用树形 dp 求解。</p>
+<p>$       $定义 $dp_i$ 为节点 $i$ 以及该节点对应子树未匹配节点的最小数量，$cnt=\sum_{\texttt{以i为根节点的后代j}} dp_j$</p>
+<script type="math/tex; mode=display">\begin{cases}
+dp_i = cnt - 1 (cnt > 0),  \\    dp_i = 1 (cnt = 0).  \\
+\end{cases}</script><p>$       $如果 $dp_1=0$ ，则说明先手必胜。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;iostream&gt;
+#include&lt;queue&gt;
+#include&lt;cstring&gt;
+using namespace std;
+vector&lt;int&gt; G[100005];
+int dp[100005],n;
+bool vis[100005];
+void dfs(int now,int pre)
+{
+    bool flag=false;
+    for(unsigned int i=0;i&lt;G[now].size();++i)
+    {
+        if(G[now][i]==pre)    continue;
+        dfs(G[now][i],now);
+        flag|=vis[G[now][i]];
+        dp[now]+=max(dp[G[now][i]],vis[G[now][i]]?1:0);
+    }
+    if(!flag || dp[now]&gt;0)    vis[now]=true;
+}
+int main(){
+    scanf(&quot;%d&quot;,&amp;n);
+    for(int i=1;i&lt;=n-1;++i)
+    {
+        int x,y;
+        scanf(&quot;%d %d&quot;,&amp;x,&amp;y);
+        G[x].push_back(y);
+        G[y].push_back(x);
+    }
+    memset(dp,-1,sizeof dp);
+    dfs(1,0);
+    puts(dp[1]?&quot;Alice&quot;:&quot;Bob&quot;);
+    return 0;
+}
+</code></pre>
+<h2 id="5-「NOI1997」积木游戏（较难的线性-dp）"><a href="#5-「NOI1997」积木游戏（较难的线性-dp）" class="headerlink" title="5.「NOI1997」积木游戏（较难的线性 dp）"></a>5.「NOI1997」积木游戏（较难的线性 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P5760" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $我们定义 $dp_{i,j,k}$ 为前 $i$ 个积木垒成 $j$ 堆，并且当前正在处理第 $k$ 个平面。$0 \leq k \leq 2$，分别代表积木不同的三面。</p>
+<p>$       $我们很容易发现我们可以再多垒成一堆，也可以搭在当前这一堆积木上面。但是一定要注意再新垒成一堆的话就不用判断之前的积木的长宽高了。</p>
+<p>$       $我们能够很顺利地推出我们的转移方程：</p>
+<script type="math/tex; mode=display">dp_{i,j,pm}=\max \{dp_{i-1,k,Last}+buf \}</script><p>$       $如果还可以垒到当前的积木上面去：</p>
+<script type="math/tex; mode=display">dp_{i,j,pm}=\max \{ {dp_{i,k,Last}+buf} \}</script><p>$       $其中 $i,j$ 意义如上，$k$ 为当前选到要搭上的积木，$pm$ 为当前平面，$Last$ 为上个平面。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;iostream&gt;
+#include&lt;queue&gt;
+using namespace std;
+int n,m,a[105],b[105],c[105],dp[105][105][3];//dp[i][j][k]：前i个堆垒j个正在处理k平面 
+int main(){
+    scanf(&quot;%d %d&quot;,&amp;n,&amp;m);
+    for(int i=1;i&lt;=n;++i)    scanf(&quot;%d %d %d&quot;,&amp;a[i],&amp;b[i],&amp;c[i]);//进行输入
+    for(int i=1;i&lt;=m;++i)
+    {
+        for(int j=1;j&lt;=n;++j)
+        {
+            for(int k=0;k&lt;j;++k)
+            {
+                for(int pm=0;pm&lt;=2;++pm)
+                {
+                    int x,y,buf;
+                    if(pm==0)    x=a[j],y=b[j],buf=c[j];
+                    if(pm==1)    x=b[j],y=c[j],buf=a[j];
+                    if(pm==2)    x=c[j],y=a[j],buf=b[j];
+                    if(x&lt;y)    x^=y^=x^=y;
+                    for(int Last=0;Last&lt;=2;++Last)
+                    {
+                        int xx,yy;
+                        if(Last==0)    xx=a[k],yy=b[k];
+                        if(Last==1)    xx=b[k],yy=c[k];
+                        if(Last==2)    xx=c[k],yy=a[k];
+                        if(xx&lt;yy)    xx^=yy^=xx^=yy;
+                        dp[i][j][pm]=max(dp[i][j][pm],dp[i-1][k][Last]+buf);
+                        if(x&gt;xx || y&gt;yy)    continue;
+                        dp[i][j][pm]=max(dp[i][j][pm],dp[i][k][Last]+buf);
+                    }
+                }
+            }
+        }
+    }
+    int ans=-10086001;
+    for(int i=1;i&lt;=n;++i)    ans=max(ans,max(max(dp[m][i][0],dp[m][i][1]),dp[m][i][2]));
+    printf(&quot;%d&quot;,ans);
+    return 0;
+}
+</code></pre>
+<h2 id="6-「HAOI2006」数字序列（很牛逼的线性-dp-数学证明）"><a href="#6-「HAOI2006」数字序列（很牛逼的线性-dp-数学证明）" class="headerlink" title="6.「HAOI2006」数字序列（很牛逼的线性 dp + 数学证明）"></a>6.「HAOI2006」数字序列（很牛逼的线性 dp + 数学证明）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P2501" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $dp 一步走，简化题意。也就是说改变一个序列里面的某些元素使得序列严格单调上升，并且修改元素最少。在满足上一个情况下，我们改变元素的幅度最小，也就是 $\sum _{i=1} ^n |a_i-fix_i|$ 最小。</p>
+<p>$       $但是我们如何确定修改元素最少呢？似乎没有很显然的方法。于是我们考虑使不修改元素尽量多，也就可以让我们有 dp 思路。</p>
+<p>$       $两个元素不修改的必要条件，当且仅当 $a_i,a_j(1 \leq i \le j \leq n)$，满足 $a_i+j-i \leq a_j$。转化之后得到 $a_i-i \leq a_j-j$。我们将所有的 $a_i-i$，第一个小问题就转化成了当前 $a$ 序列的 $LIS$。注意用 $O(n \log n)$ 的方法去转化。这里得到的 dp 值下文记为 $f_i$。</p>
+<p>$       $考虑第二个子问题。我们定义 $dp_i$ 为修改 1~i 使 $a$ 严格单调上升的最小代价。有 $cost_{j,i}$ 为把区间 $[j,i]$ 严格单调上升的最小代价，自然得到 dp 方程：</p>
+<script type="math/tex; mode=display">dp_i=\min \{ f_j+1=f_i dp_j+cost_{j,i}\}</script><p>$       $因为有 $dp_j+1=dp_i$，可以有 $cost_{j,i}$ 的决策中，$\forall k → [j,k]$ 所有元素为 $a_j$ 并且 $[k+1,l]$ 的元素都为 $a_i$。</p>
+<p>$       $有了猜想，如何证明结论成立？</p>
+<p>偷了张图，可以自己体会一下。</p>
+<p><img src="https://cdn.luogu.com.cn/upload/pic/34882.png" alt=""></p>
+<p><img src="https://s1.ax1x.com/2018/09/30/ilT4sS.gif" alt=""></p>
+<p>$       $偷懒就不证明了吧。。。反正 luogu 上面证明多得是。</p>
+<p>$       $有了这些，实际上我们遇到这样的值就进行 dp。最坏复杂度 $O(n^3)$。但是因为我们的数据随机，所以怎么 dp 都不死。xd</p>
+<p>$       $代码如下。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#define inf 1008600110086001ll
+using namespace std;
+vector&lt;long long&gt; G[35005];
+long long a[35005],n;
+long long Abs(long long x){return x&lt;0?-x:x;}
+namespace Subtasks{
+    long long dp[35005],seq[35005],sum1[35005],sum2[35005],ddpp[35005];
+    void Subtask1()
+    {
+        a[++n]=inf;
+        long long len=1;
+        seq[1]=a[1],dp[1]=1;
+        for(long long i=2;i&lt;=n;++i)
+        {
+            if(a[i]&gt;=seq[len])    seq[++len]=a[i],dp[i]=len;
+            else
+            {
+                long long whe=upper_bound(seq+1,seq+1+len,a[i])-seq;
+                seq[whe]=a[i],dp[i]=whe;
+            }
+        }
+        printf(&quot;%lld\n&quot;,n-len);
+    }
+    void prepareForSubtask2()
+    {
+        for(long long i=0;i&lt;=n;++i)    G[dp[i]].emplace_back(i),ddpp[i]=inf;
+        ddpp[0]=0;
+        a[0]=-inf;
+    }
+    void Subtask2()
+    {
+        for(long long i=1;i&lt;=n;++i)
+        {
+            for(unsigned long long j=0;j&lt;G[dp[i]-1].size();++j)
+            {
+                long long to=G[dp[i]-1][j];
+                if(a[to]&lt;=a[i])
+                {
+                    sum1[to-1]=sum2[to-1]=0;
+                    for(long long k=to;k&lt;=i;++k)    sum1[k]=Abs(a[k]-a[to])+sum1[k-1],sum2[k]=Abs(a[i]-a[k])+sum2[k-1];
+                    for(long long k=to;k&lt;=i;++k)    ddpp[i]=min(ddpp[i],ddpp[to]+sum1[k]-sum1[to]+sum2[i]-sum2[k]);
+                }
+            }
+        }
+        printf(&quot;%lld\n&quot;,ddpp[n]);
+    }
+}
+int main(){
+    scanf(&quot;%lld&quot;,&amp;n);
+    for(long long i=1;i&lt;=n;++i)    scanf(&quot;%lld&quot;,&amp;a[i]),a[i]-=i;
+    Subtasks::Subtask1();
+    Subtasks::prepareForSubtask2();
+    Subtasks::Subtask2();
+    return 0;
+}
+</code></pre>
+<h2 id="7-「GZOI2017」取石子游戏（博弈论类-dp）"><a href="#7-「GZOI2017」取石子游戏（博弈论类-dp）" class="headerlink" title="7.「GZOI2017」取石子游戏（博弈论类 dp）"></a>7.「GZOI2017」取石子游戏（博弈论类 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P5675" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $我们因为不知道第一堆石子到底是哪一堆，所以说我们直接枚举。</p>
+<p>$       $我们考虑让 Bob 后手赢这场游戏，所以说 Alice 在一开始或者第二回合变成必败状。做了nim游戏的板子的都知道必败状是 $a_1 \oplus a_2 \oplus … \oplus a_n=0$（$\oplus$ 为异或符号），我们要让 Alice 面对必败状，我们只能让剩下的 $n-1$ 堆石子异或起来大于等于第一堆。因为如果小于的话，Alice 一定能找到一种方法取第一堆石子使得 $a_1 \oplus a_2 \oplus … \oplus a_n=0$。</p>
+<p>$       $同时，我们发现 $a_i$ 极其之小，异或起来最多也不过 $2^8-1=255$，我们考虑把它作为dp数组的一维。</p>
+<p>$       $那么我们定义 $dp_{i,j}$ 为前 $i$ 堆除了枚举的第 $k$ 堆外异或起来的数为 $j$ 的方案，然后每次跑一边 dp，统计一遍答案即可。</p>
+<p>$       $时间复杂度 $O(n^2 \log a_i)$，其中 $\log a_i$ 最大为 $8$，近似于常数。</p>
+<p>$       $代码如下。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#include&lt;cstring&gt;
+#define MOD 1000000007ll
+using namespace std;
+long long n,a[205],dp[205][260],ans;
+int main(){
+    scanf(&quot;%lld&quot;,&amp;n);
+    dp[0][0]=1;
+    for(long long i=1;i&lt;=n;++i)    scanf(&quot;%lld&quot;,&amp;a[i]);
+    for(long long i=1;i&lt;=n;++i)
+    {
+        for(long long j=1;j&lt;=n;++j)
+        {
+            for(long long k=0;k&lt;=255;++k)
+            {
+                if(i==j)    dp[j][k]=dp[j-1][k];//这里一定要跳过，去掉我们枚举的“第一堆”
+                else    dp[j][k]=dp[j-1][k]+dp[j-1][k^a[j]],dp[j][k]%=MOD;
+            }
+        }
+        for(long long j=a[i];j&lt;=255;++j)    ans+=dp[n][j],ans%=MOD;//统计第i堆作为第1堆的答案
+    }
+    printf(&quot;%lld&quot;,ans);
+    return 0;
+}
+</code></pre>
+<h2 id="8-「SCOI2005」最大子矩阵（简单-dp）"><a href="#8-「SCOI2005」最大子矩阵（简单-dp）" class="headerlink" title="8.「SCOI2005」最大子矩阵（简单 dp）"></a>8.「SCOI2005」最大子矩阵（简单 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P2331" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $初看题目，$m \leq 2$。很容易发现我们经常做这种开两个算法去做的题。于是分析题目，觉得应该是可以的。</p>
+<p>$       $对于这种题，我们发现 $m = 1$ 的时候，就是我们的的经典模型：在 $n$ 个数中选 $k$ 个不相连的子串。我们可以定义 $dp_{i,j,0/1}$ 为第 $i$ 个选到第 $j$ 个子序列，对于 $a_i$ 选与不选两种情况。得到 dp 式：</p>
+<script type="math/tex; mode=display">\begin{cases}
+dp_{i,j,1}=\max \{ dp_{i-1,j,1}+a_i,dp_{i-1,j-1,0}+a_i \}\\ dp_{i,j,0}=\max \{ dp_{i-1,j,1},dp_{i-1,j,0} \}\\
+\end{cases}</script><p>$       $答案即为 $\max \{dp_{n,k,0},dp_{n,k,1}\}$。</p>
+<p>$       $有了我们在 $m=1$ 的成功经验，为什么不去试试 $m=2$ 呢。</p>
+<p>$       $可见 $m=2$ 时只有 5 种情况。分别是：</p>
+<ul>
+<li><p>空出一行；</p>
+</li>
+<li><p>选择左边而空出右边；</p>
+</li>
+<li><p>选择右边而空出左边；</p>
+</li>
+<li><p>左边和右边分别属于两个矩阵；</p>
+</li>
+<li><p>左右属于一个矩阵。</p>
+</li>
+</ul>
+<p>$       $然后根据这些东西，我们一样可以像上面一样得到转移方程，可惜这里太小写不下。（XD其实是太长了）</p>
+<p>$       $看看代码就行了。</p>
+<pre><code class="lang-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int n,m,k;
+namespace std
+{
+    namespace Subtask1
+    {
+        int dp[105][15][2];
+        int Solve()
+        {
+            for(int i=1;i&lt;=n;++i)
+            {
+                int x;
+                scanf(&quot;%d&quot;,&amp;x);
+                for(int j=1;j&lt;=k;++j)
+                {
+                    dp[i][j][1]=max(dp[i-1][j][1]+x,dp[i-1][j-1][0]+x);
+                    dp[i][j][0]=max(dp[i-1][j][1],dp[i-1][j][0]);
+                }
+            }
+            return 0&amp;printf(&quot;%d&quot;,max(dp[n][k][1],dp[n][k][0]));
+        }
+    }
+    namespace Subtask2
+    {
+        int dp[105][15][5];
+        int Solve()
+        {
+            memset(dp,-0x3f,sizeof dp);
+            for(int i=0;i&lt;=n;++i)    for(int j=0;j&lt;=k;++j)    dp[i][j][0]=0;
+            for(int i=1;i&lt;=n;++i)
+            {
+                int a,b;
+                scanf(&quot;%d %d&quot;,&amp;a,&amp;b);
+                for(int j=1;j&lt;=k;++j)    dp[i][j][0]=max({dp[i-1][j][0],dp[i-1][j][1],dp[i-1][j][2],dp[i][j-1][3],dp[i-1][j][4]}),dp[i][j][1]=max({dp[i-1][j-1][0],dp[i-1][j][1],dp[i-1][j-1][2],dp[i-1][j][3],dp[i-1][j-1][4]})+a,dp[i][j][2]=max({dp[i-1][j-1][0],dp[i-1][j-1][1],dp[i-1][j][2],dp[i-1][j][3],dp[i-1][j-1][4]})+b,dp[i][j][3]=max({dp[i-1][j-1][1],dp[i-1][j-1][2],dp[i-1][j][3],(j&gt;=2?dp[i-1][j-2][4]:-2147483647)})+a+b,dp[i][j][4]=max({dp[i-1][j-1][0],dp[i-1][j-1][1],dp[i-1][j-1][2],dp[i-1][j-1][3],dp[i-1][j][4]})+a+b;
+            }
+            return 0&amp;printf(&quot;%d&quot;,max({dp[n][k][0],dp[n][k][1],dp[n][k][2],dp[n][k][3],dp[n][k][4]}));
+        }
+    }
+}
+using namespace std;
+int main(){
+    scanf(&quot;%d %d %d&quot;,&amp;n,&amp;m,&amp;k);
+    return m==1?Subtask1::Solve():Subtask2::Solve();
+}
+</code></pre>
+<h2 id="9-「SNOI2017」英雄联盟（背包-dp）"><a href="#9-「SNOI2017」英雄联盟（背包-dp）" class="headerlink" title="9.「SNOI2017」英雄联盟（背包 dp）"></a>9.「SNOI2017」英雄联盟（背包 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P5365" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $首先说一下哈，这个里面的 $n \leq 10^6$，没这么麻烦。</p>
+<p>$       $做 dp 题都需要简化题意，这道题的意思大概就是展示策略达到 $m$ 种的最小花费。</p>
+<p>$       $我们有 $n$ 个英雄，每个英雄都是有一个皮肤的数量 $k_i$ 和花费 $c_i$ 的。很容易联想到我们的背包。这道题就是把每一个英雄看成一个分组，每组都有一个数量，花费固定。很经典的分组背包问题。我们定义 $dp_{i,j}$ 为买掉 $i$ 个皮肤用掉 $j$ Q 币的最大方案数。有 dp 方程：</p>
+<script type="math/tex; mode=display">dp_{i,j}=\max \{ dp_{i-1,j-p \times c_i} \times p \}</script><p>$       $其中 $1 \leq p \leq k_i$。注意初始化 $dp_0=1$，因为什么都不买也算作一种方案。</p>
+<p>$       $可以发现我们的二维数组死掉了。考虑优化空间。</p>
+<p>$       $我们看到只需要考虑前 $i-1$ 维，可以考虑滚掉。也可以看到后面一维，实际上这就是一个类似于 01 背包的优化方法。直接暴力滚掉二维，倒序枚举当前的 Q 币数，然后正常背包。dp 式改进为：</p>
+<script type="math/tex; mode=display">dp_j=\max \{ dp_{j - p \times c_i} \times p \}</script><p>$       $然后枚举花费 Q 币数，如果有 $m \leq dp_q$，输出 $q$。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+using namespace std;
+long long n,m,dp[1000005],k[1000005],c[1000005],rest;
+int main(){
+    scanf(&quot;%lld %lld&quot;,&amp;n,&amp;m);
+    for(long long i=1;i&lt;=n;++i)    scanf(&quot;%lld&quot;,&amp;k[i]);
+    for(long long i=1;i&lt;=n;++i)    scanf(&quot;%lld&quot;,&amp;c[i]),rest+=k[i]*c[i];
+    dp[0]=1;
+    for(long long i=1;i&lt;=n;++i)    for(long long j=rest;~j;--j)    for(long long l=1;l&lt;=k[i] &amp;&amp; l*c[i]&lt;=j;++l)    dp[j]=max(dp[j],dp[j-l*c[i]]*l);
+    for(long long i=0;i&lt;=rest;++i)    if(dp[i]&gt;=m)    return printf(&quot;%lld&quot;,i)&amp;0;
+    return 0;
+}
+</code></pre>
+<h2 id="10-「HAOI2015」树上染色（树形类背包-dp）"><a href="#10-「HAOI2015」树上染色（树形类背包-dp）" class="headerlink" title="10.「HAOI2015」树上染色（树形类背包 dp）"></a>10.「HAOI2015」树上染色（树形类背包 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P3177" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $大概意思就是说，我们要在 $n$ 个节点中把 $k$ 个涂黑，然后计算两两黑节点和白节点的距离之和，求这个最大值？</p>
+<p>$       $做过树形 dp 的人很容易想到 定义 $dp_{i,j}$ 为第 $i$ 个节点，并以 $i$ 为根在子树上选择 $j$ 个黑色节点的最大贡献。如果您是这么定义的，那么肯定 gg 了。</p>
+<p>$       $为什么呢？因为我们不只有这颗子树，在这棵子树外，有更多的节点。</p>
+<p>$       $所以说我们只能根据套路，发现我们定义 $dp_{i,j}$ 为以 $i$ 为根的子树选择 $j$ 个黑色节点的贡献。但是计算贡献是极慢的。所以说我们要考虑如何计算。</p>
+<p>$       $考虑我们只有 $k$ 个黑色节点。在这里用了 $l$ 个，那么外面不就是 $k-l$ 个了么？</p>
+<p>$       $所以说，我们在统计的时候，不以点去储存，而是用边去计算贡献。对于我们的 $dp$ 数组，贡献有：</p>
+<script type="math/tex; mode=display">dp_{to,l}+l*(k-l)*val+(size_{to}-l)*(n-k+l-size_{to})*val</script><p>$       $其中 $val$ 为当前边的权值，而 $size_i$ 为以 $i$ 为根的子树的大小。枚举 $l$。</p>
+<p>$       $这实际上就变成了一个背包问题。考虑每一棵子树分配多少黑色节点，大概就是分配体积，算出贡献。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#define mp make_pair
+#define Edge pair&lt;long long,long long&gt;
+using namespace std;
+vector&lt;Edge&gt; G[2005];
+long long dp[2005][2005],size[2005],n,k;
+void DP(long long now,long long pre)
+{
+    size[now]=1;
+    dp[now][0]=dp[now][1]=0;
+    for(unsigned long long i=0;i&lt;G[now].size();++i)
+    {
+        long long to=G[now][i].first,val=G[now][i].second;
+        if(to==pre)    continue;
+        DP(to,now);
+        size[now]+=size[to];
+        for(long long j=size[now];~j;--j)    for(long long l=0;l&lt;=min(j,size[to]);++l)    if(dp[now][j-l]!=-1)    dp[now][j]=max(dp[now][j],dp[now][j-l]+dp[to][l]+l*(k-l)*val+(size[to]-l)*(n-k+l-size[to])*val);
+    }
+}
+int main(){
+    memset(dp,-1,sizeof dp);
+    scanf(&quot;%lld %lld&quot;,&amp;n,&amp;k);
+    for(long long i=1;i&lt;n;++i)
+    {
+        long long u,v,val;
+        scanf(&quot;%lld %lld %lld&quot;,&amp;u,&amp;v,&amp;val);
+        G[u].push_back(mp(v,val));
+        G[v].push_back(mp(u,val));
+    }
+    DP(1,0);
+    printf(&quot;%lld&quot;,dp[1][k]);
+    return 0;
+}
+</code></pre>
+<h1 id="动态规划100题-11-20-题"><a href="#动态规划100题-11-20-题" class="headerlink" title="动态规划100题 11~20 题"></a>动态规划100题 11~20 题</h1><p>$       $<a href="https://www.luogu.com.cn/blog/blog10086001/dong-tai-gui-hua-100-ti" target="_blank" rel="noopener">总集链接</a></p>
+<h2 id="11-「CF1101D」GCD-Counting（思维树形-dp）"><a href="#11-「CF1101D」GCD-Counting（思维树形-dp）" class="headerlink" title="11.「CF1101D」GCD Counting（思维树形 dp）"></a>11.「CF1101D」GCD Counting（思维树形 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/CF1101D" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $首先膜拜考场上面打点分治的巨佬 小ljs。</p>
+<p>$       $观察题面，似乎没有什么可以直接下手的地方。但是观察数据范围，$a_i$ 这么小，肯定有蹊跷嘛。</p>
+<p>$       $既然 $a_i \leq 2 \times 10^5$，所以 $a_i$ 的质因子应该极其之少，所以我们可以直接枚举质因子，大力 dp 就完了。</p>
+<p>$       $考场上不应该在这道题上面花那么多时间的。。。当然 $a_i$ 如果大了，那就过不了了。。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#include&lt;cstring&gt;
+using namespace std;
+//a_i 那么小，肯定有蹊跷
+long long read()
+{
+    long long x=0,f=1;
+    char c=getchar();
+    while(c&lt;&#39;0&#39; || c&gt;&#39;9&#39;)
+    {
+        if(c==&#39;-&#39;)    f=-1;
+        c=getchar();
+    }
+    while(c&gt;=&#39;0&#39; &amp;&amp; c&lt;=&#39;9&#39;)    x=(x&lt;&lt;1)+(x&lt;&lt;3)+(c^&#39;0&#39;),c=getchar();
+    return x*f;
+}
+vector&lt;long long&gt; prime[200005],appear[200005],G[200005];
+long long n,a[200005],ans;
+void dealWith(long long x,long long situ)
+{
+    for(long long i=2;i*i&lt;=x;++i)
+    {
+        if(x%i==0)
+        {
+            prime[situ].push_back(i);
+            appear[situ].push_back(1);
+            while(x%i==0)    x/=i;
+        }
+    }
+    if(x&gt;1)    prime[situ].push_back(x),appear[situ].push_back(1);
+}
+void dfs(long long now,long long pre)
+{
+    for(unsigned long long i=0;i&lt;G[now].size();++i)
+    {
+        long long to=G[now][i];
+        if(to==pre)    continue;
+        dfs(to,now);
+        for(unsigned long long j=0;j&lt;prime[now].size();++j)    for(unsigned long long k=0;k&lt;prime[to].size();++k)    if(prime[now][j]==prime[to][k])    ans=max(ans,appear[now][j]+appear[to][k]),appear[now][j]=max(appear[now][j],1+appear[to][k]);
+    }
+    if(a[now]&gt;1)    ans=max(ans,1ll);
+}
+int main(){
+//     freopen(&quot;count.in&quot;,&quot;r&quot;,stdin);
+//     freopen(&quot;count.out&quot;,&quot;w&quot;,stdout);
+    n=read();
+    bool flag=false;
+    for(long long i=1;i&lt;=n;++i)
+    {
+        a[i]=read();
+        dealWith(a[i],i);
+        flag|=(a[i]&gt;1);
+    }
+    if(!flag)    return puts(&quot;0&quot;)&amp;0;
+    for(long long i=1;i&lt;n;++i)
+    {
+        long long u=read(),v=read();
+        G[u].push_back(v);
+        G[v].push_back(u);
+    }
+    dfs(1,0);
+    printf(&quot;%lld&quot;,ans);
+    while(1)    return 0;
+}
+</code></pre>
+<h2 id="12-「JSOI2018」潜入行动（不简单的背包树形-dp）"><a href="#12-「JSOI2018」潜入行动（不简单的背包树形-dp）" class="headerlink" title="12.「JSOI2018」潜入行动（不简单的背包树形 dp）"></a>12.「JSOI2018」潜入行动（不简单的背包树形 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P4516" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $初看题面：哦，这难道不是一道水题么？直接切嘛。</p>
+<p>$       $类似于分类讨论被自控，被爸爸控制，被儿子控制嘛。</p>
+<p>$       $再看题面，发现：如果在自己这里放上监控，是无法被控制的。于是我们的树形 dp 就宣告爆炸。</p>
+<p>$       $因为<del>根据讨论</del>理性分析之后，我们发现，其实被控制是根本一样的。只有自己放或者不放的区别。</p>
+<p>$       $考虑以上影响因素以及我们的经验，定义 $dp_{i,j,0 or 1,0 or 1}$ 表示以 $i$ 为根的子树用 $j$ 个监控器，（根可以不被监听，但是其它节点必须被监听）当前节点放不放监控器，根是否被监听，可以得到一个很长的 dp 方程，太长懒得打，就放在代码里面吧。</p>
+<p>$       $但是这样就完了吗？这道题的难点就在于，我们这样的时间复杂度是 $O(nk^2)$ 的！！那么放上朴素代码。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#include&lt;cstring&gt;
+//1
+#define MOD 1000000007ll
+using namespace std;
+typedef long long LL;
+/*
+dp[i][j][0/1][0/1]:
+以i为根，放j个监听器，根放了没有，被监听没有。
+*/
+vector&lt;int&gt; G[100005];
+long long read()
+{
+    long long x=0,f=1;
+    char c=getchar();
+    while(c&lt;&#39;0&#39; || c&gt;&#39;9&#39;)
+    {
+        if(c==&#39;-&#39;)    f=-1;
+        c=getchar();
+    }
+    while(c&gt;=&#39;0&#39; &amp;&amp; c&lt;=&#39;9&#39;)    x=(x&lt;&lt;1)+(x&lt;&lt;3)+(c^&#39;0&#39;),c=getchar();
+    return x*f;
+}//2
+int dp[100005][105][2][2],tmpdp[105][2][2],sizen[100005],n,k;
+void DP(long long now,long long pre)
+{
+    dp[now][0][0][0]=dp[now][1][1][0]=sizen[now]=1;
+    for(unsigned int i=0;i&lt;G[now].size();++i)
+    {
+        int to=G[now][i];
+        if(to==pre)    continue;
+        DP(to,now);
+        memset(tmpdp,0,sizeof tmpdp);
+        for(int j=0;j&lt;=k;++j)
+        {
+            for(int l=0;l&lt;=k-j;++l)//3
+            {
+                tmpdp[j+l][0][0]+=(
+                (LL)dp[now][j][0][0]*dp[to][l][0][1])%MOD,
+                tmpdp[j+l][0][0]%=MOD;
+                tmpdp[j+l][0][1]+=(((
+                (LL)dp[now][j][0][1]*dp[to][l][0][1])%MOD+
+                (LL)dp[now][j][0][1]*dp[to][l][1][1])+
+                (LL)dp[now][j][0][0]*dp[to][l][1][1])%MOD,
+                tmpdp[j+l][0][1]%=MOD;
+                tmpdp[j+l][1][0]+=((
+                (LL)dp[now][j][1][0]*dp[to][l][0][1])+
+                (LL)dp[now][j][1][0]*dp[to][l][0][0])%MOD,
+                tmpdp[j+l][1][0]%=MOD;
+                tmpdp[j+l][1][1]+=((((((
+                (LL)dp[now][j][1][1]*dp[to][l][0][0])%MOD+
+                (LL)dp[now][j][1][1]*dp[to][l][0][1])+
+                (LL)dp[now][j][1][1]*dp[to][l][1][0])%MOD+
+                (LL)dp[now][j][1][1]*dp[to][l][1][1])+
+                (LL)dp[now][j][1][0]*dp[to][l][1][0])+
+                (LL)dp[now][j][1][0]*dp[to][l][1][1])%MOD,
+                tmpdp[j+l][1][1]%=MOD;//dp方程
+            }
+        }
+        sizen[now]+=sizen[to];
+        memcpy(dp[now],tmpdp,sizeof tmpdp);
+    }
+}
+int main(){
+//     freopen(&quot;sneak.in&quot;,&quot;r&quot;,stdin);
+//     freopen(&quot;sneak.out&quot;,&quot;w&quot;,stdout);
+    n=read(),k=read();
+    for(int i=1;i&lt;n;++i)
+    {
+        int u=read(),v=read();
+        G[u].push_back(v);
+        G[v].push_back(u);
+    }
+    DP(1,0);
+    printf(&quot;%lld&quot;,(dp[1][k][0][1]+dp[1][k][1][1])%MOD);
+    while(1)    return 0;
+}
+</code></pre>
+<p>$       $于是我们只能考虑优化。首先来试一下优化常数吧。</p>
+<p>$       $优化 1（对应注释1）：你的八聚氧。</p>
+<p>$       $优化 2（对应注释2）：你的 <code>fread()</code>。</p>
+<p>$       $优化 3（对应注释3）：放不了这么多放什么放，把 <code>j&lt;=k</code> 改成 <code>min(k,sizen[now])</code>，<code>l&lt;=k-j</code> 改成 <code>min(k-j,sizen[to])</code>。</p>
+<p>$       $交一发，为什么 A 了？？</p>
+<p>$       $删去优化 1 和 2，发现其实 1 和 2 并没有起很大作用，删掉 3 就只有 30 分了。这是为什么呢？</p>
+<p>$       $首先分析一下复杂度，这个优化看似是一个常数优化，但是实际上起到了至关重要的作用。</p>
+<p>$       $考虑证明，思来想去也不过三种情况：</p>
+<ol>
+<li><p>一个节点有两个儿子形成的子树大小大于 $k$：实际上合并次数就不会超过 $O(\frac{n}{k})$ 了。这样之后就会变成 $O(k)$。实际上这应该是最快的一种情况。</p>
+</li>
+<li><p>一个节点有一个儿子形成的子树大小小于 $k$，合并了就成了大于 $k$ 了：因为子树的所有节点都经过一次背包合并，实际上均摊之后也只有 $O(k)$ 了。</p>
+</li>
+<li><p>otherwise：显然这个东西是不足 $O(k)$ 的。每次加入一个点，不足 $k$ 个节点，那么对于某一个特定的点，它的贡献实际上是每次加入的子树大小，还没有 $O(k)$ 了。</p>
+</li>
+</ol>
+<p>$       $综上所述：我们的时间复杂度为 $O(nk)$。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#include&lt;cstring&gt;
+#define MOD 1000000007ll
+using namespace std;
+typedef long long LL;
+/*
+dp[i][j][0/1][0/1]:
+以i为根，放j个监听器，根放了没有，被监听没有。
+*/
+vector&lt;int&gt; G[100005];
+long long read()
+{
+    long long x=0,f=1;
+    char c=getchar();
+    while(c&lt;&#39;0&#39; || c&gt;&#39;9&#39;)
+    {
+        if(c==&#39;-&#39;)    f=-1;
+        c=getchar();
+    }
+    while(c&gt;=&#39;0&#39; &amp;&amp; c&lt;=&#39;9&#39;)    x=(x&lt;&lt;1)+(x&lt;&lt;3)+(c^&#39;0&#39;),c=getchar();
+    return x*f;
+}
+int dp[100005][105][2][2],tmpdp[105][2][2],sizen[100005],n,k;
+void DP(long long now,long long pre)
+{
+    dp[now][0][0][0]=dp[now][1][1][0]=sizen[now]=1;
+    for(unsigned int i=0;i&lt;G[now].size();++i)
+    {
+        int to=G[now][i];
+        if(to==pre)    continue;
+        DP(to,now);
+        memset(tmpdp,0,sizeof tmpdp);
+        for(int j=0;j&lt;=min(k,sizen[now]);++j)
+        {
+            for(int l=0;l&lt;=min(k-j,sizen[to]);++l)
+            {
+                tmpdp[j+l][0][0]+=(
+                (LL)dp[now][j][0][0]*dp[to][l][0][1])%MOD,
+                tmpdp[j+l][0][0]%=MOD;
+                tmpdp[j+l][0][1]+=(((
+                (LL)dp[now][j][0][1]*dp[to][l][0][1])%MOD+
+                (LL)dp[now][j][0][1]*dp[to][l][1][1])+
+                (LL)dp[now][j][0][0]*dp[to][l][1][1])%MOD,
+                tmpdp[j+l][0][1]%=MOD;
+                tmpdp[j+l][1][0]+=((
+                (LL)dp[now][j][1][0]*dp[to][l][0][1])+
+                (LL)dp[now][j][1][0]*dp[to][l][0][0])%MOD,
+                tmpdp[j+l][1][0]%=MOD;
+                tmpdp[j+l][1][1]+=((((((
+                (LL)dp[now][j][1][1]*dp[to][l][0][0])%MOD+
+                (LL)dp[now][j][1][1]*dp[to][l][0][1])+
+                (LL)dp[now][j][1][1]*dp[to][l][1][0])%MOD+
+                (LL)dp[now][j][1][1]*dp[to][l][1][1])+
+                (LL)dp[now][j][1][0]*dp[to][l][1][0])+
+                (LL)dp[now][j][1][0]*dp[to][l][1][1])%MOD,
+                tmpdp[j+l][1][1]%=MOD;
+            }
+        }
+        sizen[now]+=sizen[to];
+        memcpy(dp[now],tmpdp,sizeof tmpdp);
+    }
+}
+int main(){
+//     freopen(&quot;sneak.in&quot;,&quot;r&quot;,stdin);
+//     freopen(&quot;sneak.out&quot;,&quot;w&quot;,stdout);
+    n=read(),k=read();
+    for(int i=1;i&lt;n;++i)
+    {
+        int u=read(),v=read();
+        G[u].push_back(v);
+        G[v].push_back(u);
+    }
+    DP(1,0);
+    printf(&quot;%lld&quot;,(dp[1][k][0][1]+dp[1][k][1][1])%MOD);
+    while(1)    return 0;
+}
+</code></pre>
+<h2 id="13-「CF1114D」Flood-Fill（套路区间-dp）"><a href="#13-「CF1114D」Flood-Fill（套路区间-dp）" class="headerlink" title="13.「CF1114D」Flood Fill（套路区间 dp）"></a>13.「CF1114D」Flood Fill（套路区间 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/CF1114D" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $实际上这是个模板。考虑枚举长度和长度区间，区间枚举划分点，这实际上是 $O(n^3)$ 的。只能优化区间划分点。每次加入的话，其实是不需要枚举划分点的。把序列 <code>unique</code> 掉，每次加入就不会有相同的影响了。</p>
+<pre><code class="lang-cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int n,dp[5005][5005],a[5005],len;
+int main(){
+    scanf(&quot;%d&quot;,&amp;n);
+    for(int i=1;i&lt;=n;++i)    scanf(&quot;%d&quot;,&amp;a[i]);
+    len=unique(a+1,a+1+n)-a-1;
+    for(int i=1;i&lt;=len;++i)
+    {
+        for(int l=1,r=i+1;r&lt;=len;++l,++r)
+        {
+            if(a[l]==a[r])    dp[l][r]=dp[l+1][r-1]+1;
+            else    dp[l][r]=min(dp[l+1][r],dp[l][r-1])+1;
+        }
+    }
+    printf(&quot;%d&quot;,dp[1][len]);
+    return 0;
+}
+</code></pre>
+<h2 id="14-「CF149D」Coloring-Brackets（限制性区间-dp）"><a href="#14-「CF149D」Coloring-Brackets（限制性区间-dp）" class="headerlink" title="14.「CF149D」Coloring Brackets（限制性区间 dp）"></a>14.「CF149D」Coloring Brackets（限制性区间 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/CF149D" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $其实也是裸题，只不过加上了一些预处理和颜色限制。我们首先考虑计算括号对应，很容易打出这样的代码。</p>
+<pre><code class="lang-cpp">    for(long long i=1;i&lt;=n;++i)
+    {
+        if(bracket[i]==&#39;(&#39;)    S.push(i);
+        else    dy[S.top()]=i,S.pop();
+    }
+</code></pre>
+<p>$       $加上颜色限制，定义 $dp_{i,j,0  or  1 or  2,0  or  1 or  2}$ 为区间 $[i,j]$，$i$ 不染/染成红色/染成蓝色，$j$ 同理的方案数，递归长序列，dp 合并小序列：</p>
+<ul>
+<li><p>如果 $l+1=r$ ，因为这是一个合法的括号序列，包含下面的操作话这一定是一对括号；</p>
+</li>
+<li><p>如果 $dy_l=r$，递归处理 $l+1,r-1$，合并组成 dp；</p>
+</li>
+<li><p>其他情况是最麻烦的，这是两个或以上的括号序列组成的，分别划分，依次 dp，合并即可。</p>
+</li>
+</ul>
+<p>$       $详见代码。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+#include&lt;stack&gt;
+#define MOD 1000000007ll
+using namespace std;
+stack&lt;long long&gt; S;
+long long dp[705][705][3][3],dy[705],n;
+char bracket[705];
+/*
+dp[l][r][0/1/2][0/1/2];
+[l,r] l=0/1/2 r=0/1/2
+还是写记忆化好理解。xd
+*/
+void dfs(long long l,long long r)
+{
+    if(l+1==r)
+    {
+        dp[l][r][0][1]=dp[l][r][0][2]=dp[l][r][1][0]=dp[l][r][2][0]=1;
+        return ;
+    }
+    if(dy[l]==r)
+    {
+        dfs(l+1,r-1);
+        for(long long i=0;i&lt;=2;++i)
+        {
+            for(long long j=0;j&lt;=2;++j)
+            {
+                if(i!=1)    dp[l][r][1][0]+=dp[l+1][r-1][i][j],dp[l][r][1][0]%=MOD;
+                if(i!=2)    dp[l][r][2][0]+=dp[l+1][r-1][i][j],dp[l][r][2][0]%=MOD;
+                if(j!=1)    dp[l][r][0][1]+=dp[l+1][r-1][i][j],dp[l][r][0][1]%=MOD;
+                if(j!=2)    dp[l][r][0][2]+=dp[l+1][r-1][i][j],dp[l][r][0][2]%=MOD;
+            }
+        }
+    }
+    else
+    {
+        dfs(l,dy[l]);
+        dfs(dy[l]+1,r);
+        for(long long i=0;i&lt;=2;++i)    for(long long j=0;j&lt;=2;++j)    for(long long k=0;k&lt;=2;++k)    for(long long m=0;m&lt;=2;++m)    if(!(j &amp;&amp; j==k))    dp[l][r][i][m]+=dp[l][dy[l]][i][j]*dp[dy[l]+1][r][k][m]%MOD,dp[l][r][i][m]%=MOD;
+    }
+}
+int main(){
+    // freopen(&quot;coloring.in&quot;,&quot;r&quot;,stdin);
+    // freopen(&quot;coloring.out&quot;,&quot;w&quot;,stdout);
+    scanf(&quot;%s&quot;,bracket+1);
+    n=strlen(bracket+1);
+    for(long long i=1;i&lt;=n;++i)
+    {
+        if(bracket[i]==&#39;(&#39;)    S.push(i);
+        else    dy[S.top()]=i,S.pop();
+    }
+    dfs(1,n);
+    long long ans=0;
+    for(long long i=0;i&lt;=2;++i)    for(long long j=0;j&lt;=2;++j)    ans+=dp[1][n][i][j],ans%=MOD;
+    printf(&quot;%lld&quot;,ans);
+    return 0;
+}
+</code></pre>
+<h2 id="15-「CQOI2009」叶子的染色（猜结论-树形-dp）"><a href="#15-「CQOI2009」叶子的染色（猜结论-树形-dp）" class="headerlink" title="15.「CQOI2009」叶子的染色（猜结论+树形 dp）"></a>15.「CQOI2009」叶子的染色（猜结论+树形 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P3155" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $真的没想到 T3 是最简单的。。。</p>
+<p>$       $首先猜个结论：怎么选根答案都是一样的。（毕竟这是猜结论，我也不知道为什么）。</p>
+<p>$       $然后再一个结论：我们把叶子染色，实际上就是把根染色。因为叶子染色只跟上面的颜色有关。</p>
+<p>$       $然后就完了？？定义 $dp_{i,0  or  1}$ 为 $i$ 为根，$i$ 染成黑色还是白色。则有 dp 方程：</p>
+<script type="math/tex; mode=display">\begin{cases}
+dp_{now,0}=\sum_{\texttt{now的孩子们to}}\min \{dp_{to,1},dp_{to,0}-1\} \\\\
+dp_{now,1}=\sum_{\texttt{now的孩子们to}}\min \{dp_{to,0},dp_{to,1}-1\}
+\end{cases}</script><p>$       $然后真的就完了。注意排斥掉和叶子颜色不同的方案。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+vector&lt;int&gt; G[100005];
+bool color[100005];
+int dp[100005][2],m,n;
+/*
+dp[root][0/1]:root 为根 染成什么 最少多少个。
+*/
+void dfs(int now,int pre)
+{
+    if(now&lt;=n)
+    {
+        dp[now][color[now]]=1;
+        dp[now][!color[now]]=2147483647;
+        return ;
+    }
+    dp[now][1]=dp[now][0]=1;
+    for(unsigned int i=0;i&lt;G[now].size();++i)
+    {
+        int to=G[now][i];
+        if(to==pre)    continue;
+        dfs(to,now);
+        dp[now][0]+=min(dp[to][1],dp[to][0]-1);
+        dp[now][1]+=min(dp[to][1]-1,dp[to][0]);
+    }
+}
+int main(){
+    freopen(&quot;leave.in&quot;,&quot;r&quot;,stdin);
+    freopen(&quot;leave.out&quot;,&quot;w&quot;,stdout);
+    scanf(&quot;%d %d&quot;,&amp;m,&amp;n);
+    for(int i=1,tmp;i&lt;=n;++i)    scanf(&quot;%d&quot;,&amp;tmp),color[i]=bool(tmp);
+    for(int i=1;i&lt;m;++i)
+    {
+        int u,v;
+        scanf(&quot;%d %d&quot;,&amp;u,&amp;v);
+        G[u].push_back(v);
+        G[v].push_back(u);
+    }
+    dfs(n+1,-1);
+    printf(&quot;%d&quot;,min(dp[n+1][0],dp[n+1][1]));
+    return 0;
+}
+</code></pre>
+<h2 id="16-「HAOI2016」字符合并（区间-dp-x-状压-dp）"><a href="#16-「HAOI2016」字符合并（区间-dp-x-状压-dp）" class="headerlink" title="16.「HAOI2016」字符合并（区间 dp x 状压 dp）"></a>16.「HAOI2016」字符合并（区间 dp x 状压 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P3736" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $根据经验，$k$ 很小，并且只有 01 串，很容易想到状压 dp。</p>
+<p>$       $因为分数非负，考虑把能合的全部都合起来。我们考虑合并完成后展开，各个区间一定是不相交的。考虑用上区间 dp。</p>
+<p>$       $区间 dp 套路，枚举中间端点。合并成一位 0 或 1 一定会弄掉 $k$ 个字符变成 1 个（因为其中区间不相交），所以直接 <code>ptt+=k-1</code> 就好。</p>
+<p>$       $然后特殊情况是区间长度刚好是 $k$。那么直接合并，用两个临时变量储存。（因为修改之后能够修改其他的值，不好操作）。</p>
+<p>$       $最后说一下状态定义：定义 $dp_{i,j,S}$ 为合并 $[i,j]$ 区间，状态为 $S$。有 dp 方程：</p>
+<script type="math/tex; mode=display">\begin{cases}
+dp_{i,j,now \times 2}=\max \{ dp_{i,ptt-1,now} + dp_{ptt,j,0}\}(dp_{ptt,j,0}!=-inf) \\\\ dp_{i,j,now \times 2+1}=\max \{ dp_{i,ptt-1,now} + dp_{ptt,j,1}\}(dp_{ptt,j,1}!=-inf)
+\end{cases}</script><p>$       $最后注意下枚举顺序，考虑用到 $dp_{i,ptt-1}$ 和 $dp_{ptt,j}$，枚举区间一定要倒序枚举。</p>
+<p>$       $答案为 $\max \{ dp_{1,n}\}$</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;queue&gt;
+#include&lt;algorithm&gt;
+#include&lt;cstring&gt;
+#include&lt;iostream&gt;
+#include&lt;set&gt;
+#include&lt;map&gt;
+#define lc(x) x&lt;&lt;1ll
+#define rc(x) x&lt;&lt;1ll|1ll
+using namespace std;
+char t[3005];
+int n,m;
+long long NegaInf,a[3005],cnt[2600],val[2600],dp[305][305][305];
+int main(){
+    scanf(&quot;%d %d&quot;,&amp;n,&amp;m);
+    for(int i=1;i&lt;=n;++i)    scanf(&quot;%lld&quot;,&amp;a[i]);
+    for(int i=0;i&lt;=(1&lt;&lt;m)-1;++i)    scanf(&quot;%lld %lld&quot;,&amp;cnt[i],&amp;val[i]);
+    memset(dp,128,sizeof dp);
+    for(int i=1;i&lt;=n;++i)    dp[i][i][a[i]]=0;
+    NegaInf=dp[0][0][0]; 
+    for(int dis=2;dis&lt;=n;++dis)
+    {
+        for(int i=1,j=dis;j&lt;=n;++i,++j)
+        {
+            long long lena=(j-i)%(m-1);
+            lena=!lena?m-1:lena;
+            for(int ptt=j;ptt&gt;=i+1;ptt-=m-1)
+            {
+                for(int k=0;k&lt;=(1&lt;&lt;lena)-1;++k)
+                {
+                    if(dp[i][ptt-1][k]==NegaInf)    continue;
+                    if(dp[ptt][j][0]!=NegaInf)    dp[i][j][lc(k)]=max(dp[i][j][lc(k)],dp[i][ptt-1][k]+dp[ptt][j][0]);
+                    if(dp[ptt][j][1]!=NegaInf)    dp[i][j][rc(k)]=max(dp[i][j][rc(k)],dp[i][ptt-1][k]+dp[ptt][j][1]);
+                }
+            }
+            if(lena==m-1)
+            {
+                long long rear0=NegaInf,rear1=NegaInf;
+                for(int k=0;k&lt;=(1&lt;&lt;m)-1;++k)
+                {
+                    if(dp[i][j][k]!=NegaInf)
+                    {
+                        if(cnt[k])    rear1=max(rear1,dp[i][j][k]+val[k]);
+                        else    rear0=max(rear0,dp[i][j][k]+val[k]);
+                    }
+                }
+                dp[i][j][0]=rear0,dp[i][j][1]=rear1;
+            }
+        }
+    }
+    long long ans=NegaInf;
+    for(int i=0;i&lt;=(1&lt;&lt;m)-1;++i)    ans=max(ans,dp[1][n][i]);
+    printf(&quot;%lld&quot;,ans);
+    return 0;
+}
+</code></pre>
+<h2 id="17-「GXOI-GZOI2019」宝牌一大堆（我也不知道是什么-dp）"><a href="#17-「GXOI-GZOI2019」宝牌一大堆（我也不知道是什么-dp）" class="headerlink" title="17.「GXOI/GZOI2019」宝牌一大堆（我也不知道是什么 dp）"></a>17.「GXOI/GZOI2019」宝牌一大堆（我也不知道是什么 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/P5301" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $作为一个玩雀魂的想做一下麻将题，发现 ZJOI 的麻将题过于毒瘤，这个反而比较简单。</p>
+<p>$       $考虑到只有刻子/顺子/杠子/雀头，面子与雀头只跟当前牌，下一张牌，下下张牌有关系，其他需要注意的有组成了多少个面子，有没有雀头。考虑到将这五个东西联合当前牌是什么塞进 dp 中。但是我们很快发现在这个模式下杠了牌就是<a href="https://zh.moegirl.org/%E6%97%A5%E6%9C%AC%E9%BA%BB%E5%B0%86:%E6%9D%A0%E7%B2%BE" target="_blank" rel="noopener">杠精</a>，原因是 $C_4^3=4C_4^4$。即使这张牌是 dora 也无济于事，没有用。<del>（杠杠杠，杠出新天地，杠出宝牌一大堆）</del></p>
+<p>$       $现在考虑到这六维的信息。定义 $dp_{i,,j1  or  0,k,l,o}$ 为在第 $i$ 张牌（共有 34 张牌），组成的牌中有没有雀头，组成了 $j$ 个面子，$i$ 张牌用了 $k$ 张，第 $i+1$ 张牌用了 $l$ 张，$i+2$ 用了 $o$ 张，分有无雀头两边 dp，分情况讨论新组成顺子，新组成刻子，新组成雀头就OK了。</p>
+<p>$       $定义 $dp_{i,j,0  or  1 ,k,l,o}$ 为选到 $i$ 张牌，组成 $j$ 刻子，有无雀头，$i$ 张牌用了 $k$ 张，$i+1$ 用了 $l$ 张，$i+2$ 用了 $o$ 张。对有无雀头分别 dp，考虑新增雀头/刻子/顺子讨论即可。</p>
+<p>$       $超时了，考虑优化：</p>
+<ul>
+<li><p>$l \leq 2,o \leq 2$。这是因为当 $l&gt;2$ 时，它是一个刻子，更别说 $l&gt;2,o&gt;2$ 了，这直接是一个三连刻好吗？（你听说过三连刻没有.jpg，古役，两番？）；（优化 1）</p>
+</li>
+<li><p>组合数打表计算，不要直接计算；（优化 2）</p>
+</li>
+<li><p>如果当前 dp 值为 0，直接 <code>continue</code>，这是因为你之前组成的牌胡不了。。（优化 3）</p>
+</li>
+</ul>
+<p>$       $七对子贪心选择贡献最大的七个对子，国士无双（三大民工役满之一，剩下为大三元和四暗刻）枚举哪一张用两次，$O(169)$ 枚举就 OK。</p>
+<p>$       $看不懂就领略一下精神就好了。。。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+#define mahjongMaxn 35
+using namespace std;
+const int initC[7][7]=
+{
+    {1,0,0,0,0},
+    {1,1,0,0,0},
+    {1,2,1,0,0},
+    {1,3,3,1,0},
+    {1,4,6,4,1}
+};//一定要做的事
+void write(long long t)
+{
+    if(t&lt;0)    putchar(&#39;-&#39;),t=-t;
+    if(t&gt;9)    write(t/10);
+    putchar(&#39;0&#39;+t%10);
+}
+const int Kin[]={0,1,9,10,18,19,27,28,29,30,31,32,33,34};//国士无双需要的牌，Kokushimusou in need
+const bool shien[]={0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0};//能做顺子开头的牌
+int rest[mahjongMaxn+5],isDora[mahjongMaxn+5];//剩下多少张以及是否是 dora
+long long dp[mahjongMaxn+5][6][4][6][4][4];
+int C(int x,int y){return initC[x][y];}//可以换成正常计算（优化 2）
+int mahjong(char x)
+{
+    switch (x)
+    {
+        case &#39;E&#39;:    return 28;
+        case &#39;S&#39;:    return 29;
+        case &#39;W&#39;:    return 30;
+        case &#39;N&#39;:    return 31;
+        case &#39;Z&#39;:    return 32;
+        case &#39;B&#39;:    return 33;
+        case &#39;F&#39;:    return 34;
+    }
+    return 10086001;
+}
+int mahjong(char x,char y)
+{
+    switch (y)
+    {
+        case &#39;m&#39;:    return x-&#39;0&#39;;
+        case &#39;p&#39;:    return 9+x-&#39;0&#39;;
+        case &#39;s&#39;:    return 18+x-&#39;0&#39;;
+    }
+    return 10086001;
+}//输入，返回麻将标号
+long long Kokushimusou()
+{
+    for(int i=1;i&lt;=13;++i)    if(!rest[Kin[i]])    return 0;
+    long long ans=0;
+    for(int i=1;i&lt;=13;++i)
+    {
+        long long tmp=C(rest[Kin[i]],2)*isDora[Kin[i]]*isDora[Kin[i]]*13;
+        for(int j=1;j&lt;=13;++j)    if(i!=j)    tmp*=isDora[Kin[j]]*rest[Kin[j]];
+        ans=max(ans,tmp);
+    }
+    return ans;
+}//国士无双
+long long Chitoicu()
+{
+    long long ans=7;
+    priority_queue&lt;long long&gt; PQ;
+    for(int i=1;i&lt;=mahjongMaxn-1;++i)    PQ.push(isDora[i]*isDora[i]*C(rest[i],2));
+    if(PQ.size()&lt;7)    return 0;
+    for(int i=1;i&lt;=7;++i)    ans*=PQ.top(),PQ.pop();
+    return ans;
+}//七对子
+long long OthersDP(){
+    long long ans=0;
+    dp[1][0][0][0][0][0]=1;
+    for(int i=1;i&lt;=mahjongMaxn-1;++i)
+    {
+        for(int j=0;j&lt;=4;++j)
+        {
+            for(int k=0;k&lt;=4;++k)
+            {
+                for(int l=0;l&lt;=2;++l)
+                {
+                    for(int o=0;o&lt;=2;++o)//（优化 1）
+                    {
+                        long long kc1=dp[i][j][0][k][l][o],kc2=dp[i][j][1][k][l][o];
+                        if(!kc1 &amp;&amp; !kc2)    continue;//（优化 3）
+                        if(rest[i]-k&gt;=2)    dp[i][j][1][k+2][l][o]=max(dp[i][j][1][k+2][l][o],kc1/C(rest[i],k)*C(rest[i],k+2)*isDora[i]*isDora[i]);//新雀头
+                        if(j&lt;4)
+                        {
+                            if(rest[i]-k&gt;=3)
+                                dp[i][j+1][0][k+3][l][o]=
+                                max(dp[i][j+1][0][k+3][l][o],
+                                kc1/C(rest[i],k)*C(rest[i],k+3)*isDora[i]*isDora[i]*isDora[i]),
+                                dp[i][j+1][1][k+3][l][o]=
+                                max(dp[i][j+1][1][k+3][l][o],
+                                kc2/C(rest[i],k)*C(rest[i],k+3)*isDora[i]*isDora[i]*isDora[i]);//新刻子
+                            if(shien[i] &amp;&amp; rest[i]&gt;k &amp;&amp; rest[i+1]&gt;l &amp;&amp; rest[i+2]&gt;o &amp;&amp; l!=2 &amp;&amp; o!=2)
+                                dp[i][j+1][0][k+1][l+1][o+1]=max(dp[i][j+1][0][k+1][l+1][o+1],
+                                kc1
+                                /C(rest[i],k)*C(rest[i],k+1)*isDora[i]
+                                /C(rest[i+1],l)*C(rest[i+1],l+1)*isDora[i+1]
+                                /C(rest[i+2],o)*C(rest[i+2],o+1)*isDora[i+2]),
+                                dp[i][j+1][1][k+1][l+1][o+1]=max(dp[i][j+1][1][k+1][l+1][o+1],
+                                kc2
+                                /C(rest[i],k)*C(rest[i],k+1)*isDora[i]
+                                /C(rest[i+1],l)*C(rest[i+1],l+1)*isDora[i+1]
+                                /C(rest[i+2],o)*C(rest[i+2],o+1)*isDora[i+2]);//新顺子
+                        }
+                        dp[i+1][j][0][l][o][0]=max(dp[i+1][j][0][l][o][0],kc1);
+                        dp[i+1][j][1][l][o][0]=max(dp[i+1][j][1][l][o][0],kc2);//自身状态继承下一状态
+                        if(j==4) ans=max(ans,kc2);//四个刻子和一个雀头就以经胡牌，保存答案
+                    }
+                }
+            }
+        }
+    }
+    return ans;
+}
+void Prepare()
+{
+    fill(rest,rest+mahjongMaxn,4);
+    fill(isDora,isDora+mahjongMaxn,1);
+    memset(dp,0,sizeof dp);
+}
+void ReadMahjongRiver()
+{
+    char s[2];
+    while(scanf(&quot;%s&quot;,s))
+    {
+        if(s[0]==&#39;0&#39;)    return ;
+        if(s[1]==&#39;\0&#39;)    --rest[mahjong(s[0])];
+        else    --rest[mahjong(s[0],s[1])];
+    }
+}
+void ReadDora()
+{
+    char s[2];
+    while(scanf(&quot;%s&quot;,s))
+    {
+        if(s[0]==&#39;0&#39;)    return ;
+        if(s[1]==&#39;\0&#39;)    isDora[mahjong(s[0])]=2;
+        else    isDora[mahjong(s[0],s[1])]=2;
+    }
+}//Input
+int main(){
+    long long T;
+    scanf(&quot;%lld&quot;,&amp;T);
+    while(T--&gt;0)
+    {
+        Prepare();
+        ReadMahjongRiver();
+        ReadDora();
+        write(max({Chitoicu(),Kokushimusou(),OthersDP()}));//C++11标准
+        puts(&quot;&quot;);
+    }
+    return 0;
+}
+</code></pre>
+<h2 id="18-「UVA1452」Jump（约瑟夫问题变形）"><a href="#18-「UVA1452」Jump（约瑟夫问题变形）" class="headerlink" title="18.「UVA1452」Jump（约瑟夫问题变形）"></a>18.「UVA1452」Jump（约瑟夫问题变形）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/UVA1452" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $注：以上皆为 0 开头，代表队伍中的 1，$n-1$ 代表第 $n$ 人。</p>
+<p>$       $这实际上是一个约瑟夫问题的一个变形。首先回到约瑟夫问题，它的实质是：将 $n$ 个人的子问题化成 $n-1$ 个，在同时建立一个映射关系，也就是我们的递推数组。我们要求最后一个人，就要倒退回去推出 $n$ 个人的情况。得到了最后一个人是谁，在倒推倒数第二人，倒数第三人即可。</p>
+<p>$       $所以我们定义 $dp_i$ 为 $i-1$ 个人出列后，接下来应该让谁出列（同时调整队列顺序与编号）。我们最后一个出列的人因为在队头，所以编号一定为 0。因此 $dp_1=0$。题目定义得出递推方程：</p>
+<script type="math/tex; mode=display">dp_{i-1}=dp_i-k(\mod i)</script><p>$       $即：</p>
+<script type="math/tex; mode=display">dp_i=dp_{i-1}+k(\mod i)</script><p>$       $考虑到我们要求倒数三个人，所以分别令 $dp_1=0,dp_1=1,dp_2=2$ 就可以分别求出倒数第一个，倒数第二个和第三个了。</p>
+<p>$       $这里就直接把数组滚了，代码会有点奇怪。因为 0 是开头，所以答案注意加 1。</p>
+<p>$       $滚了数组之后代码可能有点怪，可以自行理解一下。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+using namespace std;
+int main(){
+    int T;
+    scanf(&quot;%d&quot;,&amp;T);
+    while(T--&gt;0)
+    {
+        int n,k;
+        scanf(&quot;%d %d&quot;,&amp;n,&amp;k);
+        int a=0,b=(k-1)%2,c=(k-1)%3;
+        for(int i=2;i&lt;=n;++i)    a+=k,a%=i;
+        for(int i=3;i&lt;=n;++i)    b+=k,b%=i;
+        for(int i=4;i&lt;=n;++i)    c+=k,c%=i;
+        printf(&quot;%d %d %d\n&quot;,c+1,b+1,a+1);
+    }
+    return 0;
+}
+</code></pre>
+<h2 id="19-「CF235B」Let’s-play-OSU-和-「BZOJ4318」OSU-（期望-dp）"><a href="#19-「CF235B」Let’s-play-OSU-和-「BZOJ4318」OSU-（期望-dp）" class="headerlink" title="19.「CF235B」Let’s play OSU! 和 「BZOJ4318」OSU!（期望 dp）"></a>19.「CF235B」Let’s play OSU! 和 「BZOJ4318」OSU!（期望 dp）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/CF235B" target="_blank" rel="noopener">luogu1</a> <a href="https://www.luogu.com.cn/problem/P1654" target="_blank" rel="noopener">luogu2</a></p>
+<p>$       $因为前者是后者的简化版，所以放一起了，<del>我多良心啊</del>。</p>
+<p>$       $因为 $(x+1)^2=x^2+2x+1$，而 $E(x+y)=E(x)+E(y)$，我们设 $osu$ 为线性期望（类似于一次），$dp$ 表示答案。很容易得到：</p>
+<script type="math/tex; mode=display">osu_i=(osu_{i-1}+1) \times p_i</script><script type="math/tex; mode=display">dp_i=dp_{i-1}+p_i \times (2 \times osu_{i-1} +1)</script><p>$       $综上，答案为 $dp_n$。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+using namespace std;
+double osu[100005],dp[100005];
+int main(){
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    for(int i=1;i&lt;=n;++i)
+    {
+        double cure;
+        scanf(&quot;%lf&quot;,&amp;cure);
+        osu[i]=cure*(osu[i-1]+1);
+        dp[i]=dp[i-1]+cure*(2*osu[i-1]+1);
+    }
+    printf(&quot;%.10f&quot;,dp[n]);
+    return 0;
+}
+</code></pre>
+<p>$       $然后看到加强版。</p>
+<p>$       $因为 $(x+1)^3=x^3+3x^2+3x+1$。</p>
+<p>$       $考虑到 $E(x)$ 中的 $x$ 增加 1，答案就多了 $E(3x^2+3x+1)$。又去考虑 $(x+1)^2$，同理可得。线性的比较简单，不再概述。</p>
+<p>$       $返回到题目，用 $osu1$ 维护 $x$ 的期望，$osu2$ 维护 $x^2$ 的期望，$dp$ 维护答案，也就是 $x^3$ 的期望，有：</p>
+<script type="math/tex; mode=display">osu1_i=(osu1_{i-1}+1) \times p_i</script><script type="math/tex; mode=display">osu2_i=(osu2_{i-1}+2 \times osu1_{i-1} + 1) \times p_i</script><script type="math/tex; mode=display">dp_i=dp_{i-1}+(3 \times osu2_{i-1} + 3 \times osu1_{i-1}+1) \times p_i</script><p>$       $综上，答案为 $dp_n$。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+using namespace std;
+double osu1[100005],osu2[100005],dp[100005];
+int main(){
+    int n;
+    scanf(&quot;%d&quot;,&amp;n);
+    for(int i=1;i&lt;=n;++i)
+    {
+        double cure;
+        scanf(&quot;%lf&quot;,&amp;cure);
+        osu1[i]=(osu1[i-1]+1)*cure;
+        osu2[i]=(osu2[i-1]+2*osu1[i-1]+1)*cure;
+        dp[i]=dp[i-1]+(3*osu2[i-1]+3*osu1[i-1]+1)*cure;
+    }
+    printf(&quot;%.1f&quot;,dp[n]);
+    return 0;
+}
+</code></pre>
+<p>$       $至于为什么变量名叫 <code>cure</code>，是因为玩 OSU 需要解药。</p>
+<p>$       $我怎么就管不住我这手呢？？？</p>
+<h2 id="20-「CF76F」Tourist（LIS-变形）"><a href="#20-「CF76F」Tourist（LIS-变形）" class="headerlink" title="20.「CF76F」Tourist（LIS 变形）"></a>20.「CF76F」Tourist（LIS 变形）</h2><p>$       $<a href="https://www.luogu.com.cn/problem/CF76F" target="_blank" rel="noopener">luogu</a></p>
+<p>$       $不得不说是一道好题。</p>
+<p>$       $考虑到我们将每一个事件按时间排序之后，可以很容易的得到 dp 式。我们从一个点走到另外一个点，dp 值加 1 即可。</p>
+<p>$       $一个点走到另一个点的条件是：$|x_i-x_j| \leq |t_i-t_j| \times v$。从这里怎么下手？ </p>
+<p>$       $首先说结论，$-x_i+t_i \times v \leq -x_i+t_j \times v \operatorname{and} x_i+t_i \times v \leq x_j+t_j \times v$ 和上面那个式子等价。 </p>
+<p>$       $假设 $t_i \leq t_j$，当 $x_i \geq x_j$ 时，$x_i -x_j \leq (t_j -t_i) \times v$ ，否则 $x_j-x_i \leq (t_j-t_i)\times v$。</p>
+<p>$       $去掉前提。我们假设 $a_i=x_i + t_i \times v,b_i=x_i+t_j \times v$。如果一个点走到另一个点的话，必有 $a_i \leq a_j,b_i \leq b_j$。</p>
+<p>$       $这里没看懂可以在理解一下，是挺麻烦的。</p>
+<p>$       $现在我们得出 $a_i,b_i$ 单调。按 $a_i,b_i$ 排个序，求最长不下降子序列就行了。特殊的，对于第一个问题，我们只需要 $a_i,b_i \geq 0$ 的点就行了。</p>
+<pre><code class="lang-cpp">#include&lt;cstdio&gt;
+#include&lt;algorithm&gt;
+#include&lt;queue&gt;
+#include&lt;set&gt;
+#include&lt;map&gt;
+#include&lt;iostream&gt;
+#include&lt;cstring&gt;
+using namespace std;
+int x[100005],t[100005],n,v;
+struct Point{//Map to an event.
+    int x,y;
+    bool operator &lt; (Point q) const
+    {
+        if(x!=q.x)    return x&lt;q.x;
+        return y&lt;q.y;
+    }
+    Point() {}
+    Point(int X,int Y){x=X,y=Y;}
+}event[100005];
+int main(){
+    cin&gt;&gt;n;
+    for(int i=1;i&lt;=n;++i)    cin&gt;&gt;x[i]&gt;&gt;t[i];
+    cin&gt;&gt;v;
+    int tot=0;
+    for(int i=1;i&lt;=n;++i)    if(v*t[i]+x[i]&gt;=0 &amp;&amp; v*t[i]-x[i]&gt;=0)    event[++tot]=Point(v*t[i]+x[i],v*t[i]-x[i]);
+    sort(event+1,event+1+tot);
+    multiset&lt;int&gt; S;
+    multiset&lt;int&gt;::iterator Sit;
+    for(int i=1;i&lt;=tot;++i)
+    {
+        Sit=S.upper_bound(event[i].y);
+        if(Sit!=S.end())    S.erase(Sit);
+        S.insert(event[i].y);
+    }
+    cout&lt;&lt;S.size()&lt;&lt;&#39; &#39;;
+    S.clear();
+    for(int i=1;i&lt;=n;++i)    event[i]=Point(v*t[i]+x[i],v*t[i]-x[i]);
+    sort(event+1,event+1+n);
+    for(int i=1;i&lt;=n;++i)
+    {
+        Sit=S.upper_bound(event[i].y);
+        if(Sit!=S.end())    S.erase(Sit);
+        S.insert(event[i].y);
+    }
+    cout&lt;&lt;S.size()&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 1275881998@qq.com </span>
+    </div>
+</article>
+
+
+
+<div class="article_copyright">
+    <p><span class="copy-title">文章标题:</span>DP 100题</p>
+    
+    <p><span class="copy-title">本文作者:</span><a  title="Forgotten">Forgotten</a></p>
+    <p><span class="copy-title">发布时间:</span>2020-02-11, 13:25:00</p>
+    <p><span class="copy-title">最后更新:</span>2020-02-11, 13:22:22</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2020/02/11/DP100%E9%A2%98/" title="DP 100题">http://forgotten-myself.github.io/2020/02/11/DP100%E9%A2%98/</a>
+    <p>
+        <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+    </p>
+</div>
+
+
+
+
+
+    
+        <!-- MathJax配置，可通过单美元符号书写行内公式等 -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+        preferredFont: "TeX",
+        availableFonts: ["STIX","TeX"],
+        linebreaks: { automatic:true },
+        EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+        inlineMath: [ ["$", "$"], ["\\(","\\)"] ],
+        processEscapes: true,
+        ignoreClass: "tex2jax_ignore|dno",
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    },
+    messageStyle: "none"
+    });
+</script>
+<!-- 给MathJax元素添加has-jax class -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<!-- 通过连接CDN加载MathJax的js代码 -->
+<script type="text/javascript" async
+        src="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<input type="hidden" id="MathJax-js"
+        value="//cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</input>
+    
+
+
+
+
+    </div>
+    <div class="copyright">
+        <p class="footer-entry">©2017 Forgotten</p>
+<p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
+
+    </div>
+    <div class="full-toc">
+        <button class="full"><span class="min "></span></button>
+<button class="post-toc-menu"><span class="post-toc-menu-icons"></span></button>
+<div class="post-toc"><span class="post-toc-title">目录</span>
+    <div class="post-toc-content">
+
+    </div>
+</div>
+<a class="" id="rocket" ></a>
+
+    </div>
+</div>
+<div class="acParent"></div>
+
+</body>
+<script src="/js/jquery.pjax.js?v=1.0.1" ></script>
+
+<script src="/js/script.js?v=1.0.1" ></script>
+<script>
+    var img_resize = 'default';
+    /*作者、标签的自动补全*/
+    $(function () {
+        $('.search').AutoComplete({
+            'data': ['@CLJ','@LJS','#总结','#哈希','#Trie树','#树状数组','#分治','#二分','#三分','#背包','#树形DP','#区间DP','#线段树','#DP',],
+            'itemHeight': 20,
+            'width': 418
+        }).AutoComplete('show');
+    })
+    function initArticle() {
+        /*渲染对应的表格样式*/
+        
+            $(".post .pjax table").addClass("green_title");
+        
+
+        /*渲染打赏样式*/
+        
+
+        /*高亮代码块行号*/
+        
+
+        /*访问数量*/
+        
+        $.getScript("//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js");
+        
+
+        /*代码高亮，行号对齐*/
+        $('.pre-numbering').css('line-height',$('.has-numbering').css('line-height'));
+
+        
+        
+    }
+
+    /*打赏页面隐藏与展示*/
+    
+
+</script>
+
+<!--加入行号的高亮代码块样式-->
+
+<!--自定义样式设置-->
+<style>
+    
+    
+    .nav {
+        width: 542px;
+    }
+    .nav.fullscreen {
+        margin-left: -542px;
+    }
+    .nav-left {
+        width: 120px;
+    }
+    
+    
+    @media screen and (max-width: 1468px) {
+        .nav {
+            width: 492px;
+        }
+        .nav.fullscreen {
+            margin-left: -492px;
+        }
+        .nav-left {
+            width: 100px;
+        }
+    }
+    
+    
+    @media screen and (max-width: 1024px) {
+        .nav {
+            width: 492px;
+            margin-left: -492px
+        }
+        .nav.fullscreen {
+            margin-left: 0;
+        }
+        .nav .hide-list.fullscreen {
+            left: 492px
+        }
+    }
+    
+    @media screen and (max-width: 426px) {
+        .nav {
+            width: 100%;
+        }
+        .nav-left {
+            width: 100%;
+        }
+    }
+    
+    
+    .nav-right .title-list nav a .post-title, .nav-right .title-list #local-search-result a .post-title {
+        color: #383636;
+    }
+    
+    
+    .nav-right .title-list nav a .post-date, .nav-right .title-list #local-search-result a .post-date {
+        color: #5e5e5f;
+    }
+    
+    
+    .nav-right nav a.hover, #local-search-result a.hover{
+        background-color: #e2e0e0;
+    }
+    
+    
+
+    /*列表样式*/
+    
+    .post .pjax article .article-entry>ol, .post .pjax article .article-entry>ul, .post .pjax article>ol, .post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    .post .pjax article .article-entry li>ol, .post .pjax article .article-entry li>ul,.post .pjax article li>ol, .post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .post .pjax article .article-entry>ol>li, .post .pjax article .article-entry>ul>li,.post .pjax article>ol>li, .post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    .post .pjax article .article-entry li>ol>li, .post .pjax article .article-entry li>ul>li,.post .pjax article li>ol>li, .post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
+
+    /* 背景图样式 */
+    
+    
+
+
+    /*引用块样式*/
+    
+
+    /*文章列表背景图*/
+    
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        background: url("https://cdn.luogu.com.cn/upload/image_hosting/vmq7zc0o.png");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+
+    
+</style>
+
+
+
+
+
+
+
+</html>
